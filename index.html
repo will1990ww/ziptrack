@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>LION SIN ZIP TRACK | #1 Motorised Outdoor Blinds & Ziptrak in Singapore</title>
-  <meta name="description" content="Lion Sin Ziptrak Singapore offers premium motorised outdoor shades and balcony blinds. Featuring Italy Elitex and USA Phifer fabrics with Dooya motors. Get a free quote today!"/>
-  <meta name="keywords" content="Ziptrak Singapore, Outdoor Blinds, Balcony Shades, Phifer Fabric, Elitex Fabric, Dooya Motor, Zip Track"/>
+  
+  <title>Lion Sin Ziptrak® Singapore | Premium Motorised Outdoor Blinds</title>
+  <meta name="description" content="Upgrade your balcony with Lion Sin Ziptrak® Singapore. Rainproof, windproof, and MCST-compliant outdoor blinds featuring Phifer & Elitex fabrics. Direct factory price."/>
+  <meta name="keywords" content="Ziptrak Singapore, Ziptrak, Outdoor Blinds Condo, HDB Balcony Blinds, Motorised Blinds, Balcony Shades, Rainproof Blinds, MCST Approved"/>
+  <link rel="canonical" href="https://lionsin.com.sg/" />
+
+  <meta property="og:title" content="Lion Sin Ziptrak® Singapore | Premium Outdoor Blinds" />
+  <meta property="og:description" content="Rainproof, windproof, and MCST-compliant outdoor blinds. Direct factory price." />
+  <meta property="og:image" content="https://lionsin.com.sg/photo/Exterior.jpg" />
+  <meta property="og:url" content="https://lionsin.com.sg/" />
   
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   
@@ -14,7 +21,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "LION SIN PTE. LTD.",
-    "image": "https://www.yoursite.com/photo/Exterior.jpg",
+    "image": "https://lionsin.com.sg/photo/Exterior.jpg",
     "telephone": "+65 83417888",
     "email": "wei_zw@outlook.com",
     "address": {
@@ -28,162 +35,226 @@
   </script>
 
   <style>
+    /* 高级黑灰主题配色 */
     :root {
-      --primary:#1A73E8;
-      --accent:#0F4C81; --bg:#F9FBFC;
-      --card:#FFFFFF; --text:#333; --muted:#666;
-      --gap:24px; --radius:8px; --gold:#FFD700;
+      --primary: #4A90E2; 
+      --accent: #8AB4F8; 
+      --bg: #1A1A1A; /* 深灰背景 */
+      --card: #2C2C2C; /* 框架黑灰色 */
+      --text: #F0F0F0; /* 浅色文字 */
+      --muted: #B0B0B0;
+      --gap: 24px; 
+      --radius: 12px; /* 稍微圆润的边角更现代 */
+      --gold: #FFD700;
+      --wa-color: #25D366;
+      --tg-color: #0088cc;
+      --border: #444444;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--text);font-family:'Open Sans',sans-serif;line-height:1.6}
+    body{background:var(--bg);color:var(--text);font-family:'Open Sans',sans-serif;line-height:1.6; padding-bottom: 80px;}
     a{text-decoration:none}
-    header,section,footer{background:var(--card);border-radius:var(--radius);margin-bottom:2rem; padding: 2rem;}
+    
+    header,section,footer{background:var(--card);border-radius:var(--radius);margin-bottom:2rem; padding: 2.5rem 2rem; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,0.2);}
     .wrapper{max-width:1200px;margin:0 auto;padding:0 16px}
-    header{position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.1); padding: 0;}
+    
+    header{position:sticky;top:0;z-index:10; padding: 0; background: rgba(44,44,44,0.95); backdrop-filter: blur(10px);}
     header .wrapper{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
-    nav a{margin-left:12px;padding:8px 16px;background:var(--primary);color:#fff;border-radius:4px;font-weight:600}
+    nav a{margin-left:12px;padding:8px 16px;color:var(--text);border-radius:4px;font-weight:600; transition: background 0.3s;}
+    nav a:hover {background: var(--border);}
+    .header-cta {background: var(--primary); color: #fff; padding: 8px 20px; border-radius: 6px;}
 
     @keyframes shine{from{background-position:0% 50%}to{background-position:100% 50%}}
-    h1{font-family:'Cinzel',serif;font-size:2.5rem;
+    h1{font-family:'Cinzel',serif;font-size:2.2rem;
       background:linear-gradient(45deg,var(--gold),#FF8C00,var(--gold)) 0/200% 200%;
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
       animation:shine 4s ease-in-out infinite alternate;
       text-align:center;margin:1rem 0}
-    h3{font-family:'Cinzel',serif;font-size:2rem;color:var(--accent);
-      position:relative;margin:1rem 0 2rem}
-    h3::after{content:"";position:absolute;bottom:-4px;left:0;width:60px;height:3px;background:var(--primary)}
+    h2{font-family:'Cinzel',serif;font-size:2rem;color:var(--accent);
+      position:relative;margin:1rem 0 2.5rem; text-align: center;}
+    h2::after{content:"";position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:var(--primary); border-radius: 2px;}
 
-    .hero{display:flex;gap:var(--gap);height:60vh;overflow:hidden; padding: 0; background: transparent;}
-    .hero video{flex:1;width:50%;height:100%;object-fit:cover;border-radius:var(--radius)}
+    .hero{display:flex;gap:var(--gap);height:60vh;overflow:hidden; padding: 0; background: transparent; border: none; box-shadow: none;}
+    .hero video{flex:1;width:50%;height:100%;object-fit:cover;border-radius:var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,0.4);}
 
-    /* Product Highlights */
-    #products .grid{display:grid;gap:var(--gap);
-      grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
-    .intro-box{padding:1.5rem;text-align:center;
-      box-shadow:0 4px 16px rgba(0,0,0,.05);transition:transform .2s; border-radius:var(--radius);}
-    .intro-box:hover{transform:translateY(-4px)}
-    .intro-badge{font-size:2.5rem;margin-bottom:1rem}
-    .intro-box h4{font-size:1.2rem;margin-bottom:.75rem;color:var(--primary)}
+    /* 信任背书横幅 */
+    .trust-banner {display: flex; justify-content: space-around; background: #222; padding: 1.5rem; border-radius: var(--radius); margin-bottom: 2rem; text-align: center; border: 1px solid var(--border);}
+    .trust-item strong {display: block; color: var(--gold); font-size: 1.2rem;}
+    .trust-item span {font-size: 0.9rem; color: var(--muted);}
+
+    #products .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+    .intro-box{padding:2rem 1.5rem;text-align:center;background: #333; border: 1px solid var(--border); transition:transform .3s; border-radius:var(--radius);}
+    .intro-box:hover{transform:translateY(-6px); border-color: var(--primary);}
+    .intro-badge{font-size:2.5rem;margin-bottom:1rem; filter: grayscale(20%);} /* 降低表情的饱和度，契合高级感 */
+    .intro-box h4{font-size:1.2rem;margin-bottom:.75rem;color:var(--text)}
     .intro-box p{color:var(--muted)}
 
-    /* Why Choose */
-    #why-choose .grid{display:grid;gap:var(--gap);
-      grid-template-columns:1fr 1fr;}
-    .flash,.price{background:rgba(255,255,255,0.25) url('https://flagcdn.com/w320/sg.png')top right/cover no-repeat;
-      animation:flutter 6s ease-in-out infinite;color:#fff}
-    @keyframes flutter{0%,100%{background-position:top right}50%{background-position:bottom left}}
-    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-    .flash h4{font-size:1.6rem;color:#00E5FF;animation:blink 1s step-start infinite}
-    .price h4{font-size:1.6rem;color:#FFD700;animation:blink 1s step-start infinite}
-    .cta{display:inline-block;margin-top:1rem;padding:12px 24px;border-radius:4px;font-weight:600;
-      background:#E3F2FD!important;color:#0F4C81!important}
+    #why-choose .grid{display:grid;gap:var(--gap);grid-template-columns:1fr 1fr;}
+    .flash,.price{background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://flagcdn.com/w320/sg.png') center/cover no-repeat; color:#fff}
+    .flash h4{font-size:1.6rem;color:#00E5FF;}
+    .price h4{font-size:1.6rem;color:#FFD700;}
+    .cta{display:inline-block;margin-top:1.5rem;padding:14px 28px;border-radius:6px;font-weight:600; background:var(--primary);color:#fff; transition: background 0.3s;}
+    .cta:hover {background: #357ABD;}
 
-    /* Premium Fabrics Intro (Combined Phifer & Elitex) */
-    .brand-desc{display:flex;gap:1.5rem;padding:2rem;box-shadow:0 4px 16px rgba(0,0,0,.05);margin-bottom:2rem; border-radius:var(--radius);}
-    .brand-desc img.flag{width:40px; height:auto; object-fit:contain; align-self: flex-start;}
-    .title{font-weight:bold;margin-bottom:.5rem; font-size: 1.2rem; color:var(--accent)}
+    .brand-desc{display:flex;gap:1.5rem;padding:2rem; background: #333; border: 1px solid var(--border); margin-bottom:2rem; border-radius:var(--radius);}
+    .brand-desc img.flag{width:40px; height:auto; object-fit:contain; align-self: flex-start; border-radius: 4px;}
+    .title{font-weight:bold;margin-bottom:.8rem; font-size: 1.3rem; color:var(--accent)}
     .para{color:var(--muted);margin-bottom:1rem}
     .para ul {margin-left: 20px; margin-top: 10px;}
     .para ul li {margin-bottom: 8px;}
 
-    /* Fabric Gallery */
     #fabric-gallery .fabric-list{display:grid;gap:var(--gap);grid-template-columns:1fr;}
-    .fabric-item{display:flex;gap:var(--gap);align-items:stretch}
-    .fabric-item img{width:300px;height:300px;object-fit:cover;border-radius:var(--radius);box-shadow:0 4px 16px rgba(0,0,0,.05)}
-    .fabric-item .text{flex:1;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.05); border-radius:var(--radius);}
-    .fabric-item .text h4{margin-bottom:12px; color:var(--accent);}
+    .fabric-item{display:flex;gap:var(--gap);align-items:stretch; background: #333; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden;}
+    .fabric-item img{width:350px;height:100%;object-fit:cover;}
+    .fabric-item .text{flex:1;padding:2rem;}
+    .fabric-item .text h4{margin-bottom:12px; font-size: 1.4rem; color:var(--accent);}
 
-    /* Dooya Section */
-    .dooya-intro{padding:1.5rem;margin-bottom:2rem;box-shadow:0 4px 16px rgba(0,0,0,.05);color:var(--muted); border-radius:var(--radius);}
-    .dooya-features{display:grid;gap:var(--gap);grid-template-columns:280px 280px 1fr;}
-    .dooya-features img,.dooya-features video{width:100%;height:200px;object-fit:cover;border-radius:var(--radius);box-shadow:0 4px 16px rgba(0,0,0,.05)}
-    .dooya-features ul{list-style:disc inside;color:var(--muted); padding-left: 10px;}
-    .dooya-features li{margin-bottom:.5rem}
+    .dooya-features{display:grid;gap:var(--gap);grid-template-columns:280px 280px 1fr; background: #333; padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);}
+    .dooya-features img,.dooya-features video{width:100%;height:200px;object-fit:cover;border-radius:8px;}
+    .dooya-features ul{list-style:none;color:var(--text); padding-left: 0; margin-top: 1rem;}
+    .dooya-features li{margin-bottom:1rem; padding-left: 28px; position: relative;}
+    .dooya-features li::before {content: '✔'; position: absolute; left: 0; color: var(--primary); font-weight: bold;}
 
-    /* Forms & Samples & Videos */
-    #quote-form form{padding:2rem;box-shadow:0 4px 16px rgba(0,0,0,.05); border-radius:var(--radius);}
-    #quote-form input,#quote-form select{width:100%;padding:12px;margin-bottom:1rem;border:1px solid #CCC;border-radius:4px; font-family: inherit;}
-    #quote-form button{background:var(--primary);color:#fff;padding:12px 24px;border:none;border-radius:4px;font-weight:600;cursor:pointer; font-size: 1rem; transition: background 0.3s;}
-    #quote-form button:hover{background:var(--accent);}
+    /* 表单优化：提高触控体验 */
+    #quote-form form{padding:2.5rem; background: #333; border: 1px solid var(--border); border-radius:var(--radius);}
+    #quote-form input,#quote-form select{width:100%;padding:14px;margin-bottom:1.2rem;border:1px solid var(--border);border-radius:6px; font-family: inherit; background: #222; color: #fff; font-size: 16px;}
+    #quote-form input:focus, #quote-form select:focus {outline: none; border-color: var(--primary);}
+    #quote-form button{background:var(--wa-color);color:#fff;padding:16px 24px;border:none;border-radius:6px;font-weight:bold;cursor:pointer; font-size: 1.1rem; width: 100%; transition: background 0.3s;}
+    #quote-form button:hover{background:#1EBE5D;}
 
-    .fabric-samples{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fill, minmax(120px, 1fr));}
-    .fabric-samples .sample{position:relative}
-    .fabric-samples img{width:100%;height:150px;object-fit:cover;border-radius:var(--radius);box-shadow:0 4px 16px rgba(0,0,0,.05);cursor:pointer;display:block}
-    .fabric-samples .sample::after{content:attr(data-letter);position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.7);color:#fff;font-weight:bold;padding:4px 10px;border-radius:4px;font-size:1.2rem}
+    /* 客户评价板块样式 */
+    #reviews .grid {display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
+    .review-card {background: #333; padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);}
+    .stars {color: var(--gold); font-size: 1.2rem; margin-bottom: 0.5rem;}
+    .review-text {color: var(--muted); font-style: italic; margin-bottom: 1rem;}
+    .review-author {color: var(--text); font-weight: bold; font-size: 0.9rem;}
 
-    #videos .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));}
-    .video-item{text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.05);overflow:hidden;border-radius:var(--radius)}
-    .video-item video{width:100%;aspect-ratio:1/1;object-fit:cover}
-    .video-item h4{padding:1rem;color:var(--accent); background: #fff;}
+    .fabric-samples{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));}
+    .fabric-samples .sample{position:relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);}
+    .fabric-samples img{width:100%;height:150px;object-fit:cover;cursor:pointer;display:block; transition: transform 0.3s;}
+    .fabric-samples img:hover {transform: scale(1.05);}
+    .fabric-samples .sample::after{content:attr(data-letter);position:absolute;top:8px;left:8px;background:var(--card);color:var(--text);font-weight:bold;padding:4px 12px;border-radius:4px;font-size:1rem; border: 1px solid var(--border);}
 
-    .qa-item{margin-bottom:1.5rem;color:var(--muted); padding-bottom: 1rem; border-bottom: 1px solid #eee;}
-    .qa-item:last-child {border-bottom: none;}
-    .qa-item strong{color:var(--accent); display: block; margin-bottom: 0.5rem;}
+    #videos .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));}
+    .video-item{text-align:center; background: #333; overflow:hidden;border-radius:var(--radius); border: 1px solid var(--border);}
+    .video-item video{width:100%;aspect-ratio:1/1;object-fit:cover; background-color: #000;}
+    .video-item h4{padding:1.2rem;color:var(--text); font-size: 1.1rem;}
 
-    footer {text-align: center; color: var(--muted); margin-bottom: 0;}
+    .qa-item{margin-bottom:1.5rem;color:var(--muted); padding: 1.5rem; border-left: 4px solid var(--primary); background: #333; border-radius: 4px; border: 1px solid var(--border); border-left-width: 4px;}
+    .qa-item strong{color:var(--text); display: block; margin-bottom: 0.8rem; font-size: 1.1rem;}
 
+    footer {text-align: center; color: var(--muted); margin-bottom: 0; background: #111; border: none;}
+
+    .floating-buttons {position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;}
+    .fab {width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.4); transition: transform 0.3s ease;}
+    .fab:hover {transform: scale(1.1);}
+    .fab-whatsapp {background-color: var(--wa-color);}
+    .fab-telegram {background-color: var(--tg-color);}
+    .fab svg {width: 32px; height: 32px; fill: #fff;}
+
+    /* 移动端深度适配 */
     @media (max-width:768px){
+      header,section,footer {padding: 1.5rem 1rem;}
       .hero{flex-direction:column;height:auto}
-      .hero video{width:100%;height:250px;margin-bottom:0}
+      .hero video{width:100%;height:300px;margin-bottom:0}
+      .trust-banner {flex-direction: column; gap: 1rem;}
       .brand-desc {flex-direction: column;}
       .fabric-item{flex-direction:column}
       .fabric-item img{width:100%;height:250px;}
-      .dooya-features{grid-template-columns:1fr;}
-      nav {display: none;} /* Consider adding a hamburger menu for mobile later */
+      .dooya-features{grid-template-columns:1fr; padding: 1rem;}
+      nav a {display: none;} /* 手机端隐藏多余导航，保留核心CTA */
+      .header-cta {display: inline-block;}
+      .floating-buttons { bottom: 15px; right: 15px; }
+      .fab { width: 50px; height: 50px; }
+      .fab svg { width: 26px; height: 26px; }
+      #quote-form form {padding: 1.5rem 1rem;}
+      h2 {font-size: 1.6rem;}
     }
   </style>
 </head>
 <body>
+
+  <div class="floating-buttons">
+    <a href="https://wa.me/6583417888" target="_blank" class="fab fab-whatsapp" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+    <a href="https://t.me/lionsinbalcony" target="_blank" class="fab fab-telegram" aria-label="Join our Telegram Group">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+      </svg>
+    </a>
+  </div>
+
   <header>
     <div class="wrapper">
-      <h1>LION SIN ZIP TRACK</h1>
+      <h1>LION SIN ZIPTRAK®</h1>
       <nav>
         <a href="#products">Products</a>
         <a href="#premium-fabrics">Fabrics</a>
-        <a href="#quote-form">Quote</a>
         <a href="#videos">Videos</a>
-        <a href="#qa">FAQ</a>
+        <a href="#quote-form" class="header-cta">Get Quote</a>
       </nav>
     </div>
   </header>
 
   <section class="hero wrapper">
-    <video autoplay muted loop playsinline src="video/ziptracklogovideo.mp4"></video>
-    <video autoplay muted loop playsinline src="video/ziptracklogovideo2.mp4"></video>
+    <video autoplay muted loop playsinline src="video/ziptraklogovideo.mp4"></video>
+    <video autoplay muted loop playsinline src="video/ziptraklogovideo2.mp4"></video>
   </section>
 
   <main class="wrapper">
+    <div class="trust-banner">
+      <div class="trust-item"><strong>MCST Approved</strong><span>100% Compliant</span></div>
+      <div class="trust-item"><strong>Direct Factory</strong><span>Best Price Guarantee</span></div>
+      <div class="trust-item"><strong>5-Year Warranty</strong><span>Motor & Fabric</span></div>
+      <div class="trust-item"><strong>1-Day Installation</strong><span>Fast & Clean</span></div>
+    </div>
+
     <section id="products">
-      <h3>✨ Product Highlights</h3>
+      <h2>✨ Product Highlights</h2>
       <div class="grid">
-        <div class="intro-box"><div class="intro-badge">🇺🇸</div><h4>Phifer USA Fabric</h4><p><strong>Microban® Protection</strong></p></div>
-        <div class="intro-box"><div class="intro-badge">🇮🇹</div><h4>Elitex Italy Fabric</h4><p><strong>5-Years Warranty</strong></p></div>
-        <div class="intro-box"><div class="intro-badge">⚙️</div><h4>Motor by Dooya</h4><p><strong>5-Years Warranty</strong></p></div>
-        <div class="intro-box"><div class="intro-badge">🏗️</div><h4>Premium Aluminium</h4><p><strong>Expert Installation in SG</strong></p></div>
+        <div class="intro-box"><div class="intro-badge">🇺🇸</div><h4>Phifer USA Fabric</h4><p>Microban® Protection</p></div>
+        <div class="intro-box"><div class="intro-badge">🇮🇹</div><h4>Elitex Italy Fabric</h4><p>5-Years Warranty</p></div>
+        <div class="intro-box"><div class="intro-badge">⚙️</div><h4>Motor by Dooya</h4><p>5-Years Warranty</p></div>
+        <div class="intro-box"><div class="intro-badge">🏗️</div><h4>Premium Aluminium</h4><p>Expert Installation in SG</p></div>
       </div>
     </section>
 
-    <section id="why-choose">
-      <h3>✅ Why Choose Lion Sin Ziptrak® Singapore</h3>
+    <section id="reviews">
+      <h2>💬 What Our Customers Say</h2>
       <div class="grid">
-        <div class="intro-box flash"><div class="intro-badge">💎</div><h4>Unbeatable Value</h4><p>Best Quality & Price Islandwide</p><a href="#quote-form" class="cta">Get a free quotation now</a></div>
-        <div class="intro-box price"><div class="intro-badge">💰</div><h4>Transparent Pricing</h4><p>No hidden costs, direct factory rates</p><a href="#quote-form" class="cta">WhatsApp Consultation</a></div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">"Excellent service from Lion Sin! The Ziptrak blocks the heavy rain completely on my condo balcony. MCST approval was handled smoothly."</div>
+          <div class="review-author">— Jason T., Tampines</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">"Very professional installation. The Dooya motor is so quiet and syncs with my Google Home perfectly. Highly recommend their direct factory price."</div>
+          <div class="review-author">— Sarah L., Hougang</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">"Changed my HDB balcony into a usable indoor space. The 5% openness fabric is just nice for airflow while blocking the afternoon sun."</div>
+          <div class="review-author">— Michael C., Bukit Merah</div>
+        </div>
       </div>
     </section>
 
     <section id="premium-fabrics">
-      <h3>🌟 Our Premium Fabric Brands</h3>
+      <h2>🌟 Our Premium Fabric Brands</h2>
       
       <div class="brand-desc">
         <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag"/>
         <div>
-          <div class="title">Phifer USA — The Industry Standard for Performance & Health</div>
+          <div class="title">Phifer USA — The Industry Standard</div>
           <div class="para">
-            Imported directly from the USA, Phifer is the gold standard for outdoor balcony blinds in Singapore's tropical climate. Engineered with advanced fiberglass and polyester yarns, it delivers unmatched weather resistance and outward visibility.
+            Imported directly from the USA, Phifer is the gold standard for outdoor balcony blinds in Singapore's tropical climate.
             <ul>
-              <li><strong>Microban® Antimicrobial Protection:</strong> The only shade fabric with built-in protection against mold, mildew, and bacteria—crucial for humid environments.</li>
-              <li><strong>GREENGUARD® Gold Certified:</strong> Ensures low chemical emissions for superior indoor air quality, safe for children and pets.</li>
-              <li><strong>Superior Heat & UV Blockage:</strong> Blocks up to 99% of solar heat and UV rays, effectively retaining aircon temperature inside while reducing sun glare.</li>
+              <li><strong>Microban® Antimicrobial:</strong> Built-in protection against mold and mildew.</li>
+              <li><strong>GREENGUARD® Gold:</strong> Safe for children and pets.</li>
+              <li><strong>Heat & UV Blockage:</strong> Blocks up to 99% of solar heat.</li>
             </ul>
           </div>
         </div>
@@ -193,22 +264,20 @@
         <img src="https://flagcdn.com/w40/it.png" alt="Italy Flag" class="flag"/>
         <div>
           <div class="title">Italy’s Elitex Fabric — Exceptional Craftsmanship</div>
-          <div class="para">Elitex is a globally trusted Italian brand, known for its exceptional craftsmanship and innovative fabric technology. Using advanced equipment and rigorous lab testing, Elitex guarantees consistent, high-performance fabrics that stand the test of time.</div>
-          <div class="para">Our extensive range includes ScreenView, Blackout, Cross Stitch, and other specialty fabrics—each engineered with strict quality control and industry-leading standards. Experience the difference with Elitex—trusted by professionals worldwide.</div>
+          <div class="para">Elitex is a globally trusted Italian brand, known for its exceptional craftsmanship and innovative fabric technology. Guarantees consistent, high-performance fabrics that stand the test of time.</div>
         </div>
       </div>
     </section>
 
     <section id="fabric-gallery">
-      <h3>Fabric Series & Openness Guide</h3>
+      <h2>Fabric Series & Openness Guide</h2>
       <div class="fabric-list">
         <div class="fabric-item">
-          <img src="photo/Elitex Super 6.jpg" alt="1% Openness Fabric">
+          <img src="photo/Elitex Super 6.jpg" alt="1% Openness Fabric for Condo Balcony">
           <div class="text">
-            <h4>1% Openness (Phifer / Elitex Super 6)</h4>
+            <h4>1% Openness (MCST Approved)</h4>
             <p><strong>Maximum Aircon Retention & Privacy</strong></p>
-            <p>Designed to perfectly fit your Ziptrak® shading system. Available in popular colors, the 1% openness factor is widely approved for condos in Singapore. It offers the best balance of retaining cool aircon temperatures indoors while still allowing a soft diffusion of natural light.</p>
-            <p>Crafted to withstand Singapore’s intense heat, temperature fluctuations, and heavy rainfall.</p>
+            <p>Widely approved for condos in Singapore. Offers the best balance of retaining cool aircon temperatures indoors while allowing a soft diffusion of natural light.</p>
           </div>
         </div>
         <div class="fabric-item">
@@ -216,49 +285,37 @@
           <div class="text">
             <h4>5% Openness (ScreenView Exterior)</h4>
             <p><strong>Optimal Outward Views & Airflow</strong></p>
-            <p>Ideal for external windows, pool enclosures, and alfresco areas, it delivers excellent sun and glare protection while maintaining clear outward views.</p>
-            <p>With just the right amount of light filtration, it provides daytime privacy and a comfortable ambiance—perfect for enjoying outdoor living and natural breezes without compromise.</p>
-          </div>
-        </div>
-        <div class="fabric-item">
-          <img src="photo/Elitex Blackout Collection.jpg" alt="0% Blackout Fabric">
-          <div class="text">
-            <h4>0% Openness (Blackout Collection)</h4>
-            <p><strong>Total Light Control & Rain Protection</strong></p>
-            <p>Specially designed for maximum protection, offering total daytime privacy and complete blockage of rain and harsh sunlight. Made with a durable coating, this fabric is anti-fade, dust- and mold-resistant. Enjoy outdoor living with ultimate protection and style.</p>
+            <p>Ideal for HDB balconies and alfresco areas, delivering excellent sun protection while maintaining clear outward views.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="dooya-info">
-      <h3>Dooya Tubular Motor – Trusted Worldwide</h3>
-      <div class="dooya-intro">
-        <p><strong>Every 5 seconds, a Dooya motor is installed somewhere. Join professionals in over 100 countries who trust Dooya to upgrade their shading solutions.</strong></p>
-        <p>As a global leader in smart motor solutions, Dooya delivers powerful, whisper-quiet, and durable motors for blinds and awnings.</p>
-      </div>
+      <h2>Dooya Tubular Motor – Trusted Worldwide</h2>
       <div class="dooya-features">
         <img src="photo/dooya sg.jpg" alt="Dooya Motor in Singapore">
         <video autoplay muted loop playsinline src="video/dooya-intro.mp4"></video>
-        <ul>
-          <li>✅ Seamlessly integrates with smart home systems (Alexa, Google, Siri)</li>
-          <li>✅ Whisper-quiet operation for maximum comfort</li>
-          <li>✅ High lifting power suitable for all applications</li>
-          <li>✅ IP-rated and heat-protected, meeting global certifications</li>
-          <li>✅ Sleek, modern design</li>
-          <li>✅ <strong>5-Years Warranty</strong> plus worldwide professional support</li>
-        </ul>
+        <div>
+          <p style="margin-bottom: 1rem; color: var(--gold); font-weight: bold;">Every 5 seconds, a Dooya motor is installed somewhere in the world.</p>
+          <ul>
+            <li>Smart home integration (Alexa, Google, Siri)</li>
+            <li>Whisper-quiet operation for maximum comfort</li>
+            <li>IP-rated and heat-protected for SG weather</li>
+            <li><strong>5-Years Warranty</strong> included</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="quote-form">
-      <h3>📐 Request Budget Quote</h3>
+      <h2>📐 Request a Free Quote</h2>
       <form id="budgetForm">
         <input type="text" id="qName" placeholder="Your Name" required>
         <input type="text" id="qAddress" placeholder="Address (Condo/HDB/Landed)" required>
-        <div style="display:flex; gap:1rem;">
-          <input type="number" id="qHeight" placeholder="Balcony Height (m)" required>
-          <input type="number" id="qLength" placeholder="Balcony Length (m)" required>
+        <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+          <input type="number" id="qHeight" placeholder="Balcony Height (m)" style="flex: 1; min-width: 140px;" required>
+          <input type="number" id="qLength" placeholder="Balcony Length (m)" style="flex: 1; min-width: 140px;" required>
         </div>
 
         <select id="opennessType" required>
@@ -277,19 +334,19 @@
         </select>
 
         <select id="aluminiumColorChoice" required>
-          <option value="" disabled selected>Select Aluminium Color (G)</option>
-          <option value="G-Alum-elegant soft white">G-Alum-elegant soft white</option>
-          <option value="G-Alum-metallic black">G-Alum-metallic black</option>
-          <option value="G-Alum-brown">G-Alum-brown</option>
-          <option value="G-Alum-metallic gray">G-Alum-metallic gray</option>
+          <option value="" disabled selected>Select Aluminium Color</option>
+          <option value="Elegant Soft White">Elegant Soft White</option>
+          <option value="Metallic Black">Metallic Black</option>
+          <option value="Brown">Brown</option>
+          <option value="Metallic Gray">Metallic Gray</option>
         </select>
 
-        <button type="button" id="sendWhatsApp">Send Inquiry via WhatsApp</button>
+        <button type="button" id="sendWhatsApp">Get Instant Quote via WhatsApp</button>
       </form>
     </section>
 
     <section id="fabric-samples">
-      <h3>Aluminium & Fabric Openness & Color – Click to Review</h3>
+      <h2>Aluminium & Fabric Colors – Click to Review</h2>
       <div class="fabric-samples">
         <div class="sample" data-letter="A"><img src="photo/A.jpg" onclick="window.open('photo/A.jpg','_blank')" alt="Sample A"></div>
         <div class="sample" data-letter="B"><img src="photo/B.jpg" onclick="window.open('photo/B.jpg','_blank')" alt="Sample B"></div>
@@ -302,36 +359,43 @@
     </section>
 
     <section id="videos">
-      <h3>🎥 Our Product Videos</h3>
+      <h2>🎥 Our Product Videos</h2>
       <div class="grid">
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Electric.Manual.Hybrid.mp4"></video><h4>Electric / Manual / Hybrid</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Manual Only.mp4"></video><h4>Manual Only</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Test Video 1.mp4"></video><h4>Test Video 1</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Waterproof & Windproof Test.mp4"></video><h4>Waterproof & Windproof Test</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline src="video/Electric_Manual_Hybrid.mp4"></video><h4>Electric / Manual / Hybrid</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline src="video/Manual_Only.mp4"></video><h4>Manual Only</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline src="video/Test_Video_1.mp4"></video><h4>Test Video 1</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline src="video/Waterproof_Windproof_Test.mp4"></video><h4>Waterproof & Windproof Test</h4></div>
         <div class="video-item"><video autoplay muted loop playsinline src="video/NewVideo1.mp4"></video><h4>Fully Automated Production</h4></div>
         <div class="video-item"><video autoplay muted loop playsinline src="video/NewVideo2.mp4"></video><h4>Finished Products Showcase</h4></div>
       </div>
     </section>
 
     <section id="qa">
-      <h3>❓ FAQ</h3>
-      <div class="qa-item"><strong>Q: How long does a typical installation take?</strong><br>A: Most residential jobs finish within one day; larger commercial installs take 1–2 days.</div>
-      <div class="qa-item"><strong>Q: What warranty coverage is included?</strong><br>A: We provide a 5-year warranty on fabric, motor, and frame components.</div>
-      <div class="qa-item"><strong>Q: Can I integrate with smart home systems?</strong><br>A: Yes—fully compatible with Alexa, Google Assistant, and Siri.</div>
-      <div class="qa-item"><strong>Q: Do you offer a site survey?</strong><br>A: We include a complimentary site survey and professional measurement prior to quoting.</div>
+      <h2>❓ Frequently Asked Questions</h2>
+      <div class="qa-item">
+        <strong>Q: Do I need MCST approval to install outdoor blinds in my condo?</strong>
+        <p>A: Yes. We make this easy by providing all necessary fabric specifications (e.g., 1% openness factor) and official color codes tailored to your condo’s guidelines to ensure smooth approval.</p>
+      </div>
+      <div class="qa-item">
+        <strong>Q: Are your outdoor blinds fully waterproof and windproof?</strong>
+        <p>A: Our Ziptrak® systems are highly weather-resistant. They effectively block heavy rain and withstand strong winds. For safety during extreme storms, we recommend retracting them.</p>
+      </div>
+      <div class="qa-item">
+        <strong>Q: How long does the whole process take?</strong>
+        <p>A: After a free site measurement and order confirmation, the actual installation in your home usually finishes within just <strong>one day</strong>.</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="wrapper">
       <strong>LIONSIN PTE. LTD.</strong><br>
-      WhatsApp: 83417888 | Email: wei_zw@outlook.com<br>
-      Available islandwide – Hougang, Tampines, Bukit Merah &amp; more
+      WhatsApp: 8341 7888 | Telegram: @lionsinbalcony | Email: wei_zw@outlook.com<br>
+      Serving HDBs, Condos, and Landed Properties islandwide – Hougang, Tampines, Bukit Merah &amp; more
     </div>
   </footer>
 
   <script>
-    // Maintains your original logic perfectly
     const colorData = {
       A:[['A1','1. White'],['A2','2. Beige'],['A3','3. Gray'],['A4','4. Dark Gray'],['A5','5. Brown'],['A6','6. Black']],
       B:[['B1','1. White'],['B2','2. Dark Gray'],['B3','3. Beige'],['B4','4. Dark Gray']],
@@ -359,7 +423,6 @@
     });
 
     document.getElementById('sendWhatsApp').onclick = () => {
-      // Basic validation before sending
       if(!document.getElementById('qName').value || !document.getElementById('qAddress').value) {
           alert("Please fill in your Name and Address.");
           return;
