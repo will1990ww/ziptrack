@@ -17,43 +17,76 @@
   <meta property="og:image" content="https://lionsin.com.sg/photo/Exterior.jpg" />
   <meta property="og:url" content="https://lionsin.com.sg/" />
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "LION SIN PTE. LTD.",
-    "image": "https://lionsin.com.sg/photo/Exterior.jpg",
-    "telephone": "+65 83417888",
-    "email": "bimprosg@outlook.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Singapore",
-      "addressCountry": "SG"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "LION SIN PTE. LTD.",
+      "image": "https://lionsin.com.sg/photo/Exterior.jpg",
+      "telephone": "+65 83417888",
+      "email": "bimprosg@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Singapore",
+        "addressCountry": "SG"
+      },
+      "areaServed": ["Hougang", "Tampines", "Bukit Merah", "Singapore"],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "10"
+      }
     },
-    "areaServed": ["Hougang", "Tampines", "Bukit Merah", "Singapore"],
-    "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "10"
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need MCST approval to install outdoor blinds in my condo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We make this easy by providing all necessary fabric specifications (e.g., 1% openness factor) and official color codes tailored to your condo’s guidelines to ensure smooth approval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your outdoor blinds fully waterproof and windproof?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Ziptrak® systems are highly weather-resistant. They effectively block heavy rain and withstand strong winds. For extreme storm warnings, we recommend retracting them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the whole process take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After a free site measurement and order confirmation, the actual installation at your home is completed within just 2 days."
+          }
+        }
+      ]
     }
-  }
+  ]
   </script>
 
   <style>
-    /* 高级极简黑灰主题配色 - 拒绝刺眼的高光与白色框架 */
     :root {
       --primary: #4A90E2;
-      --accent: #D4AF37; /* 高级香槟金 */
-      --bg: #0F0F11; /* 极深灰/近黑背景 */
-      --card: #161618; /* 高级暗色卡片 */
-      --border: #2C2C2E; /* 统一的黑灰色框架，取代白色 */
+      --accent: #D4AF37; 
+      --bg: #0F0F11; 
+      --card: #161618; 
+      --border: #2C2C2E; 
       --text: #EAEAEA; 
       --muted: #A0A0A5;
       --gap: 24px; 
-      --radius: 8px; /* 更锐利挺拔的直角/微圆角边缘 */
+      --radius: 8px; 
       --gold: #D4AF37;
       --wa-color: #25D366;
       --tg-color: #0088cc;
@@ -63,7 +96,6 @@
     body { background: var(--bg); color: var(--text); font-family: 'Open Sans', sans-serif; line-height: 1.7; padding-bottom: 80px; -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; transition: all 0.3s ease; }
     
-    /* 统一的黑灰色框架结构 */
     header, section, footer { 
       background: var(--card); 
       border-radius: var(--radius); 
@@ -85,33 +117,29 @@
     .header-cta:hover { background: var(--accent); color: var(--bg); }
     .header-cta::after { display: none; }
 
-    /* 高级感标题动画 */
     @keyframes shine { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
     h1 { font-family: 'Cinzel', serif; font-size: 2.4rem; background: linear-gradient(45deg, #B8860B, #FFD700, #B8860B) 0/200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shine 5s ease-in-out infinite alternate; text-align: center; margin: 0; letter-spacing: 2px; }
     h2 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--text); position: relative; margin: 1rem 0 3.5rem; text-align: center; font-weight: 600; letter-spacing: 1px; }
     h2::after { content: ""; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 40px; height: 2px; background: var(--accent); }
 
-    /* Hero Section优化 - 更有张力的视频排版 */
-    .hero { display: flex; gap: var(--gap); height: 65vh; padding: 0; background: transparent; border: none; box-shadow: none; margin-bottom: 3rem; }
-    .hero video { flex: 1; width: 50%; height: 100%; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
+    /* 顶部视频：采用电影级 21:9 超宽屏比例，保证两者高宽绝对一致 */
+    .hero { display: flex; flex-direction: column; gap: var(--gap); padding: 0; background: transparent; border: none; box-shadow: none; margin-bottom: 3rem; }
+    .hero video { width: 100%; aspect-ratio: 21/9; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,0.6); background-color: #000; }
 
-    /* 信任背书 */
     .trust-banner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; background: var(--card); padding: 2rem; border-radius: var(--radius); margin-bottom: 3rem; text-align: center; border: 1px solid var(--border); }
     .trust-item { padding: 1rem; border-right: 1px solid var(--border); }
     .trust-item:last-child { border-right: none; }
     .trust-item strong { display: block; color: var(--accent); font-size: 1.3rem; font-family: 'Cinzel', serif; margin-bottom: 0.5rem; }
     .trust-item span { font-size: 0.95rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
 
-    /* 响应式自适应 Grid 布局 */
-    .grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    
-    .intro-box { padding: 2.5rem 2rem; text-align: center; background: #1A1A1C; border: 1px solid var(--border); transition: all 0.4s ease; border-radius: var(--radius); }
+    /* Highlights: 强制4列紧凑排版 */
+    #products .grid { display: grid; grid-template-columns: repeat(4, 1fr) !important; gap: 1.5rem; }
+    .intro-box { padding: 2rem 1.5rem; text-align: center; background: #1A1A1C; border: 1px solid var(--border); transition: all 0.4s ease; border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; align-items: center; }
     .intro-box:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08); }
-    .intro-badge { font-size: 2.5rem; margin-bottom: 1.5rem; opacity: 0.85; filter: grayscale(30%); }
-    .intro-box h4 { font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--text); font-weight: 600; }
-    .intro-box p { color: var(--muted); font-size: 0.95rem; }
+    .intro-badge { font-size: 2.2rem; margin-bottom: 1rem; opacity: 0.85; filter: grayscale(30%); }
+    .intro-box h4 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--text); font-weight: 600; }
+    .intro-box p { color: var(--muted); font-size: 0.9rem; margin: 0; }
 
-    /* 品牌介绍优化 */
     .brand-desc { display: flex; gap: 2rem; padding: 2.5rem; background: #1A1A1C; border: 1px solid var(--border); margin-bottom: 2rem; border-radius: var(--radius); transition: border-color 0.3s ease; }
     .brand-desc:hover { border-color: #3C3C3E; }
     .brand-desc img.flag { width: 45px; height: auto; border-radius: 4px; opacity: 0.9; }
@@ -120,51 +148,50 @@
     .para ul { margin-left: 1.5rem; margin-top: 1rem; }
     .para ul li { margin-bottom: 10px; }
 
-    /* 织物画廊排版 */
-    .fabric-list { display: grid; gap: 2rem; }
-    .fabric-item { display: flex; align-items: stretch; background: #1A1A1C; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; }
-    .fabric-item img { width: 45%; height: auto; min-height: 300px; object-fit: cover; border-right: 1px solid var(--border); }
-    .fabric-item .text { flex: 1; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-    .fabric-item .text h4 { margin-bottom: 1rem; font-size: 1.5rem; color: var(--text); font-family: 'Cinzel', serif; }
-    .fabric-item .text p { color: var(--muted); margin-bottom: 1rem; }
+    /* 织物系列: 4个一排，共3排 */
+    .fabric-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .fabric-item { display: flex; flex-direction: column; background: #1A1A1C; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s; }
+    .fabric-item:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .fabric-item img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid var(--border); background: #222; }
+    .fabric-item .text { padding: 1.5rem; display: flex; flex-direction: column; justify-content: flex-start; flex: 1; }
+    .fabric-item .text h4 { margin-bottom: 0.8rem; font-size: 1.1rem; color: var(--text); font-family: 'Cinzel', serif; line-height: 1.3; }
+    .fabric-item .text p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; line-height: 1.5; }
 
-    /* 电机介绍 */
-    .dooya-features { display: grid; gap: 2.5rem; grid-template-columns: 300px 300px 1fr; background: #1A1A1C; padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); align-items: center; }
-    .dooya-features img, .dooya-features video { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); }
+    /* 杜亚电机: 重新设计为并排的 三列布局 (图片、视频、文字) */
+    .dooya-features { display: grid; gap: 2rem; grid-template-columns: 1fr 1fr 1.2fr; background: #1A1A1C; padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); align-items: center; }
+    .dooya-features img, .dooya-features video { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); background: #000; }
+    .dooya-text { padding-left: 10px; }
     .dooya-features ul { list-style: none; padding: 0; }
-    .dooya-features li { margin-bottom: 1.2rem; padding-left: 32px; position: relative; color: var(--muted); }
+    .dooya-features li { margin-bottom: 1.2rem; padding-left: 32px; position: relative; color: var(--muted); font-size: 1.05rem; }
     .dooya-features li::before { content: '✦'; position: absolute; left: 0; color: var(--accent); font-size: 1.1rem; }
 
-    /* 表单极致优化 */
     #quote-form form { padding: 3rem; background: #1A1A1C; border: 1px solid var(--border); border-radius: var(--radius); max-width: 800px; margin: 0 auto; }
     #quote-form input, #quote-form select { width: 100%; padding: 16px; margin-bottom: 1.5rem; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; background: var(--bg); color: var(--text); font-size: 16px; transition: border-color 0.3s ease; }
     #quote-form input:focus, #quote-form select:focus { outline: none; border-color: var(--accent); }
     #quote-form button { background: var(--wa-color); color: #fff; padding: 18px 30px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 1.1rem; width: 100%; transition: transform 0.2s, background 0.3s; letter-spacing: 1px; }
     #quote-form button:hover { background: #1EBE5D; transform: translateY(-2px); }
 
-    /* 客户评价扩展到10个，采用美观的网格 */
-    #reviews .grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-    .review-card { background: #1A1A1C; padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
-    .review-card:hover { border-color: #3C3C3E; transform: translateY(-4px); }
-    .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; letter-spacing: 2px; }
-    .review-text { color: var(--text); font-style: italic; margin-bottom: 1.5rem; line-height: 1.8; font-size: 0.95rem; }
-    .review-author { color: var(--muted); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--border); padding-top: 1rem; }
-
-    /* 织物样本 */
     .fabric-samples { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
     .fabric-samples .sample { position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
     .fabric-samples img { width: 100%; height: 160px; object-fit: cover; cursor: pointer; display: block; transition: transform 0.5s ease; filter: brightness(0.9); }
     .fabric-samples img:hover { transform: scale(1.08); filter: brightness(1); }
     .fabric-samples .sample::after { content: attr(data-letter); position: absolute; top: 10px; left: 10px; background: rgba(22, 22, 24, 0.9); color: var(--accent); font-family: 'Cinzel', serif; font-weight: bold; padding: 6px 14px; border-radius: 4px; font-size: 1.1rem; border: 1px solid var(--border); backdrop-filter: blur(4px); }
 
-    /* 视频展示 */
-    #videos .grid { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; }
+    /* 视频展示区：3个一排，共2排 (6个视频) */
+    #videos .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .video-item { background: #1A1A1C; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); transition: transform 0.3s; }
     .video-item:hover { transform: translateY(-5px); border-color: var(--accent); }
     .video-item video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background-color: #000; border-bottom: 1px solid var(--border); }
     .video-item h4 { padding: 1.5rem; color: var(--text); font-size: 1.1rem; text-align: center; font-weight: 600; }
 
-    /* FAQ */
+    /* Reviews: 4个一排，共2排 (8条) */
+    #reviews .grid { display: grid; grid-template-columns: repeat(4, 1fr) !important; gap: 1.5rem; }
+    .review-card { background: #1A1A1C; padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
+    .review-card:hover { border-color: #3C3C3E; transform: translateY(-4px); }
+    .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+    .review-text { color: var(--text); font-style: italic; margin-bottom: 1.5rem; line-height: 1.8; font-size: 0.95rem; }
+    .review-author { color: var(--muted); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--border); padding-top: 1rem; }
+
     .qa-item { margin-bottom: 1.5rem; color: var(--muted); padding: 2rem; background: #1A1A1C; border-radius: var(--radius); border: 1px solid var(--border); border-left: 4px solid var(--accent); transition: background 0.3s; }
     .qa-item:hover { background: #1e1e20; }
     .qa-item strong { color: var(--text); display: block; margin-bottom: 1rem; font-size: 1.15rem; font-weight: 600; }
@@ -172,7 +199,6 @@
     footer { text-align: center; color: var(--muted); margin-bottom: 0; background: var(--bg); border: none; border-top: 1px solid var(--border); box-shadow: none; padding: 3rem 1rem; }
     footer strong { color: var(--text); letter-spacing: 2px; font-family: 'Cinzel', serif; font-size: 1.2rem; }
 
-    /* 悬浮按钮组 */
     .floating-buttons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
     .fab { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.5); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
     .fab:hover { transform: scale(1.15); }
@@ -181,35 +207,54 @@
     .fab svg { width: 34px; height: 34px; fill: #fff; }
 
     /* --- 移动端深度重构与布局适配 --- */
+    @media (max-width: 1024px) {
+      .dooya-features { grid-template-columns: 1fr 1fr; }
+      .dooya-text { grid-column: span 2; padding-top: 1rem; }
+    }
+    
     @media (max-width: 992px) {
-      .hero { height: auto; flex-direction: column; }
-      .hero video { width: 100%; height: 350px; }
+      .hero video { aspect-ratio: 16/9; } /* 平板端恢复标准比例 */
       .trust-banner { grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 1.5rem; }
       .trust-item:nth-child(even) { border-right: none; }
       .trust-item:nth-child(1), .trust-item:nth-child(2) { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
-      .fabric-item { flex-direction: column; }
-      .fabric-item img { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
-      .dooya-features { grid-template-columns: 1fr; }
+      .fabric-list { grid-template-columns: repeat(2, 1fr); }
+      #videos .grid { grid-template-columns: repeat(2, 1fr); }
+      #reviews .grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
 
     @media (max-width: 768px) {
-      header, section, footer { padding: 2.5rem 1.2rem; border-radius: 0; border-left: none; border-right: none; margin-bottom: 1rem; }
+      header, section, footer { padding: 2rem 1.2rem; border-radius: 0; border-left: none; border-right: none; margin-bottom: 1rem; }
       .wrapper { padding: 0 10px; }
       
       h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.6rem; margin-bottom: 2.5rem; }
+      h2 { font-size: 1.6rem; margin-bottom: 2rem; }
       
-      nav a { display: none; } /* 移动端隐藏常规导航 */
+      nav a { display: none; } 
       .header-cta { display: inline-block; margin-left: auto; font-size: 0.9rem; padding: 8px 16px; }
       
-      .hero video { height: 280px; }
+      #products .grid { gap: 8px !important; }
+      .intro-box { padding: 15px 5px; }
+      .intro-badge { font-size: 1.5rem; margin-bottom: 8px; }
+      .intro-box h4 { font-size: 0.85rem; margin-bottom: 4px; line-height: 1.2; }
+      .intro-box p { font-size: 0.75rem; line-height: 1.2; }
+
       .trust-banner { grid-template-columns: 1fr; }
       .trust-item { border-right: none !important; border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
       .trust-item:last-child { border-bottom: none; padding-bottom: 0; }
       
       .brand-desc { flex-direction: column; padding: 1.5rem; gap: 1.2rem; }
-      .fabric-item .text { padding: 1.5rem; }
       
+      .dooya-features { grid-template-columns: 1fr; }
+      .dooya-text { grid-column: span 1; padding-left: 0; }
+      
+      .fabric-list { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .fabric-item img { height: 140px; }
+      .fabric-item .text { padding: 1rem; }
+      .fabric-item .text h4 { font-size: 1rem; }
+      
+      #videos .grid { grid-template-columns: 1fr; }
+      #reviews .grid { grid-template-columns: 1fr !important; }
+
       #quote-form form { padding: 1.5rem 1rem; }
       .flex-mobile { flex-direction: column; gap: 0 !important; }
       
@@ -223,14 +268,10 @@
 
   <div class="floating-buttons">
     <a href="https://wa.me/6583417888" target="_blank" class="fab fab-whatsapp" aria-label="Chat on WhatsApp">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-      </svg>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </a>
     <a href="https://t.me/lionsinbalcony" target="_blank" class="fab fab-telegram" aria-label="Join our Telegram Group">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-      </svg>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
     </a>
   </div>
 
@@ -247,8 +288,8 @@
   </header>
 
   <section class="hero wrapper">
-    <video autoplay muted loop playsinline src="video/ziptraklogovideo.mp4"></video>
-    <video autoplay muted loop playsinline src="video/ziptraklogovideo2.mp4"></video>
+    <video autoplay muted loop playsinline controls preload="metadata" src="video/ziptraklogovideo.mp4"></video>
+    <video autoplay muted loop playsinline controls preload="metadata" src="video/ziptraklogovideo2.mp4"></video>
   </section>
 
   <main class="wrapper">
@@ -264,84 +305,8 @@
       <div class="grid">
         <div class="intro-box"><div class="intro-badge">🇺🇸</div><h4>Phifer USA Fabric</h4><p>Microban® Protection</p></div>
         <div class="intro-box"><div class="intro-badge">🇮🇹</div><h4>Elitex Italy Fabric</h4><p>5-Years Warranty</p></div>
-        <div class="intro-box"><div class="intro-badge">⚙️</div><h4>Motor by Dooya</h4><p>Whisper Quiet Technology</p></div>
-        <div class="intro-box"><div class="intro-badge">🏗️</div><h4>Premium Aluminium</h4><p>Expert Installation in SG</p></div>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <h2>💬 What Our Customers Say</h2>
-      <div class="grid">
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Excellent service from Lion Sin! The Ziptrak blocks the heavy rain completely on my condo balcony. MCST approval was handled smoothly."</div>
-          </div>
-          <div class="review-author">— Jason T., Tampines</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Very professional installation. The Dooya motor is so quiet and syncs with my Google Home perfectly. Highly recommend their direct factory price."</div>
-          </div>
-          <div class="review-author">— Sarah L., Hougang</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Changed my HDB balcony into a usable indoor space. The 5% openness fabric is just nice for airflow while blocking the afternoon sun."</div>
-          </div>
-          <div class="review-author">— Michael C., Bukit Merah</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"The 2 days installation process was incredibly fast and seamless. The sleek black-grey frames perfectly match my BTO's modern aesthetic."</div>
-          </div>
-          <div class="review-author">— Emily W., Punggol</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Highly recommend the Elitex fabric. It effectively blocks the harsh afternoon heat while keeping my condo cool and private."</div>
-          </div>
-          <div class="review-author">— David K., Sengkang</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Their workmanship is top-notch. The team left the balcony spotless after the setup. The motor is indeed whisper-quiet."</div>
-          </div>
-          <div class="review-author">— Linda M., Bedok</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"My balcony furniture is finally safe from sudden rainstorms! The 1% openness gives us great privacy from the opposite block."</div>
-          </div>
-          <div class="review-author">— Ryan P., Clementi</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Direct factory pricing saved me hundreds compared to other quotes. Premium quality, and getting MCST approval was a breeze."</div>
-          </div>
-          <div class="review-author">— Chloe S., Yishun</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Very professional and patient customer service. The Ziptrak system feels extremely sturdy, totally windproof during recent storms."</div>
-          </div>
-          <div class="review-author">— Daniel R., Woodlands</div>
-        </div>
-        <div class="review-card">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">"Their WhatsApp support was responsive and transparent. The final automated blind setup completely exceeded my expectations!"</div>
-          </div>
-          <div class="review-author">— Wei Ling, Jurong East</div>
-        </div>
+        <div class="intro-box"><div class="intro-badge">⚙️</div><h4>Motor by Dooya</h4><p>Whisper Quiet Tech</p></div>
+        <div class="intro-box"><div class="intro-badge">🏗️</div><h4>Premium Frame</h4><p>Expert SG Installation</p></div>
       </div>
     </section>
 
@@ -349,25 +314,32 @@
       <h2>🌟 Our Premium Fabric Brands</h2>
       
       <div class="brand-desc">
-        <img src="https://flagcdn.com/w80/us.png" alt="USA Flag" class="flag"/>
+        <img src="https://flagcdn.com/us.svg" alt="USA Flag" class="flag" loading="lazy"/>
         <div>
-          <div class="title">Phifer USA — The Industry Standard</div>
+          <div class="title">Phifer USA — The Industry Gold Standard</div>
           <div class="para">
-            Imported directly from the USA, Phifer is the gold standard for outdoor balcony blinds in Singapore's tropical climate.
+            Imported directly from the USA, Phifer fabrics are engineered specifically to combat Singapore's harsh tropical climate. Protect your family and furniture with world-class durability.
             <ul>
-              <li><strong>Microban® Antimicrobial:</strong> Built-in protection against mold and mildew.</li>
-              <li><strong>GREENGUARD® Gold:</strong> Safe for children and pets.</li>
-              <li><strong>Heat & UV Blockage:</strong> Blocks up to 99% of solar heat.</li>
+              <li><strong>Microban® Antimicrobial:</strong> Built-in, lifetime protection against mold, mildew, and bacteria.</li>
+              <li><strong>GREENGUARD® Gold:</strong> Certified safe for indoor air quality—perfect for children and pets.</li>
+              <li><strong>Ultimate Heat Blockage:</strong> Reduces up to 99% of solar heat, significantly lowering your air-conditioning bills.</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="brand-desc">
-        <img src="https://flagcdn.com/w80/it.png" alt="Italy Flag" class="flag"/>
+        <img src="https://flagcdn.com/it.svg" alt="Italy Flag" class="flag" loading="lazy"/>
         <div>
-          <div class="title">Italy’s Elitex Fabric — Exceptional Craftsmanship</div>
-          <div class="para">Elitex is a globally trusted Italian brand, known for its exceptional craftsmanship and innovative fabric technology. Guarantees consistent, high-performance fabrics that stand the test of time against strong winds and rain.</div>
+          <div class="title">Italy’s Elitex — Exceptional Craftsmanship & Elegance</div>
+          <div class="para">
+            Elitex is globally renowned for its sophisticated Italian craftsmanship combined with robust fabric technology. 
+            <ul>
+              <li><strong>Weather Resistant:</strong> Guarantees consistent high performance against strong driving winds and heavy rain.</li>
+              <li><strong>Privacy & Aesthetics:</strong> Offers a luxurious finish that enhances your balcony's look while ensuring total privacy from neighbors.</li>
+              <li><strong>Long-Lasting Colors:</strong> UV-stabilized threads prevent fading, keeping your blinds looking brand new for years.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -375,37 +347,36 @@
     <section id="fabric-gallery">
       <h2>Fabric Series & Openness Guide</h2>
       <div class="fabric-list">
-        <div class="fabric-item">
-          <img src="photo/Elitex Super 6.jpg" alt="1% Openness Fabric for Condo Balcony">
-          <div class="text">
-            <h4>1% Openness (MCST Approved)</h4>
-            <p><strong>Maximum Aircon Retention & Privacy</strong></p>
-            <p>Widely approved for condos in Singapore. Offers the best balance of retaining cool aircon temperatures indoors while allowing a soft diffusion of natural light.</p>
-          </div>
-        </div>
-        <div class="fabric-item">
-          <img src="photo/Exterior.jpg" alt="5% Openness Fabric">
-          <div class="text">
-            <h4>5% Openness (ScreenView Exterior)</h4>
-            <p><strong>Optimal Outward Views & Airflow</strong></p>
-            <p>Ideal for HDB balconies and alfresco areas, delivering excellent sun protection while maintaining clear outward views.</p>
-          </div>
-        </div>
+        <div class="fabric-item"><img src="photo/fabric1.jpg" alt="1% Openness Fabric" loading="lazy"><div class="text"><h4>1% Openness Blackout</h4><p>Maximum Aircon Retention & Privacy. Widely approved for condos.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric2.jpg" alt="2% Openness Fabric" loading="lazy"><div class="text"><h4>2% Openness Shade</h4><p>Excellent UV protection while allowing slight natural light diffusion.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric3.jpg" alt="3% Openness Fabric" loading="lazy"><div class="text"><h4>3% Openness Balance</h4><p>The perfect mid-point between outward visibility and indoor heat reduction.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric4.jpg" alt="5% Openness Fabric" loading="lazy"><div class="text"><h4>5% ScreenView Exterior</h4><p>Ideal for HDB balconies. Excellent airflow while maintaining clear outward views.</p></div></div>
+        
+        <div class="fabric-item"><img src="photo/fabric5.jpg" alt="10% Openness Fabric" loading="lazy"><div class="text"><h4>10% Openness Breezy</h4><p>Maximum ventilation for alfresco and garden areas.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric6.jpg" alt="Gray Fabric Series" loading="lazy"><div class="text"><h4>Charcoal Gray Series</h4><p>Modern and sleek, perfect for contemporary apartment aesthetics.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric7.jpg" alt="Beige Fabric Series" loading="lazy"><div class="text"><h4>Soft Beige Series</h4><p>Warm tones to create a cozy, resort-like balcony atmosphere.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric8.jpg" alt="Black Fabric Series" loading="lazy"><div class="text"><h4>Midnight Black Series</h4><p>Ultimate glare reduction. The choice for a bold, striking facade.</p></div></div>
+        
+        <div class="fabric-item"><img src="photo/fabric9.jpg" alt="Dual Tone Fabric" loading="lazy"><div class="text"><h4>Dual-Tone Weave</h4><p>Elegant textured finish that adds depth to your outdoor space.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric10.jpg" alt="Heavy Duty Mesh" loading="lazy"><div class="text"><h4>Heavy Duty Mesh</h4><p>Extra tear resistance for high-wind coastal properties.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric11.jpg" alt="Translucent Fabric" loading="lazy"><div class="text"><h4>Translucent Series</h4><p>Brightens up dark balconies without compromising on rain protection.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric12.jpg" alt="Custom Match Fabric" loading="lazy"><div class="text"><h4>Custom Color Matching</h4><p>MCST strictly compliant colors directly tailored to your estate.</p></div></div>
       </div>
     </section>
 
     <section id="dooya-info">
       <h2>Dooya Tubular Motor – Trusted Worldwide</h2>
       <div class="dooya-features">
-        <img src="photo/dooya sg.jpg" alt="Dooya Motor in Singapore">
-        <video autoplay muted loop playsinline src="video/dooya-intro.mp4"></video>
-        <div>
+        <img src="photo/dooya sg.jpg" alt="Dooya Motor Installation in Singapore" loading="lazy">
+        <video autoplay muted loop playsinline controls preload="metadata" src="video/dooya-intro.mp4"></video>
+        <div class="dooya-text">
           <p style="margin-bottom: 1.5rem; color: var(--accent); font-weight: 600; font-size: 1.1rem;">Every 5 seconds, a Dooya motor is installed somewhere in the world.</p>
           <ul>
-            <li>Smart home integration (Alexa, Google, Siri)</li>
-            <li>Whisper-quiet operation for maximum comfort</li>
-            <li>IP-rated and heat-protected for SG weather</li>
-            <li><strong>5-Years Warranty</strong> included</li>
+            <li>Smart home integration (Compatible with Alexa, Google, Siri)</li>
+            <li>Whisper-quiet operation for maximum indoor comfort</li>
+            <li>IP-rated waterproof and heat-protected for SG weather</li>
+            <li>Effortless remote control with single-touch stop limits</li>
+            <li><strong>5-Years Full Replacement Warranty</strong> included</li>
           </ul>
         </div>
       </div>
@@ -451,25 +422,63 @@
     <section id="fabric-samples">
       <h2>Aluminium & Fabric Colors – Click to Review</h2>
       <div class="fabric-samples">
-        <div class="sample" data-letter="A"><img src="photo/A.jpg" onclick="window.open('photo/A.jpg','_blank')" alt="Sample A"></div>
-        <div class="sample" data-letter="B"><img src="photo/B.jpg" onclick="window.open('photo/B.jpg','_blank')" alt="Sample B"></div>
-        <div class="sample" data-letter="C"><img src="photo/C.jpg" onclick="window.open('photo/C.jpg','_blank')" alt="Sample C"></div>
-        <div class="sample" data-letter="D"><img src="photo/D.jpg" onclick="window.open('photo/D.jpg','_blank')" alt="Sample D"></div>
-        <div class="sample" data-letter="E"><img src="photo/E.jpg" onclick="window.open('photo/E.jpg','_blank')" alt="Sample E"></div>
-        <div class="sample" data-letter="F"><img src="photo/F.jpg" onclick="window.open('photo/F.jpg','_blank')" alt="Sample F"></div>
-        <div class="sample" data-letter="G"><img src="photo/G.jpg" onclick="window.open('photo/G.jpg','_blank')" alt="Sample G"></div>
+        <div class="sample" data-letter="A"><img src="photo/A.jpg" onclick="window.open('photo/A.jpg','_blank')" alt="Sample A" loading="lazy"></div>
+        <div class="sample" data-letter="B"><img src="photo/B.jpg" onclick="window.open('photo/B.jpg','_blank')" alt="Sample B" loading="lazy"></div>
+        <div class="sample" data-letter="C"><img src="photo/C.jpg" onclick="window.open('photo/C.jpg','_blank')" alt="Sample C" loading="lazy"></div>
+        <div class="sample" data-letter="D"><img src="photo/D.jpg" onclick="window.open('photo/D.jpg','_blank')" alt="Sample D" loading="lazy"></div>
+        <div class="sample" data-letter="E"><img src="photo/E.jpg" onclick="window.open('photo/E.jpg','_blank')" alt="Sample E" loading="lazy"></div>
+        <div class="sample" data-letter="F"><img src="photo/F.jpg" onclick="window.open('photo/F.jpg','_blank')" alt="Sample F" loading="lazy"></div>
+        <div class="sample" data-letter="G"><img src="photo/G.jpg" onclick="window.open('photo/G.jpg','_blank')" alt="Sample G" loading="lazy"></div>
       </div>
     </section>
 
     <section id="videos">
       <h2>🎥 Our Product Showcase</h2>
       <div class="grid">
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Electric_Manual_Hybrid.mp4"></video><h4>Electric / Manual / Hybrid</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Manual_Only.mp4"></video><h4>Manual Only</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Test_Video_1.mp4"></video><h4>Motor Performance Test</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/Waterproof_Windproof_Test.mp4"></video><h4>Waterproof & Windproof Test</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/NewVideo1.mp4"></video><h4>Fully Automated Production</h4></div>
-        <div class="video-item"><video autoplay muted loop playsinline src="video/NewVideo2.mp4"></video><h4>Finished Products Showcase</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" src="video/Electric_Manual_Hybrid.mp4"></video><h4>Electric / Manual / Hybrid</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" src="video/Manual_Only.mp4"></video><h4>Manual Only</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" src="video/NewVideo1.mp4"></video><h4>Fully Automated Production</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" src="video/Test_Video_1.mp4.mp4"></video><h4>Motor Performance Test</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" src="video/Waterproof_Windproof_Test.mp4"></video><h4>Waterproof & Windproof Test</h4></div>
+        <div class="video-item"><video autoplay muted loop playsinline controls preload="metadata" src="video/ziptrak%20after.mp4"></video><h4>Installation After Effect</h4></div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <h2>💬 What Our Customers Say</h2>
+      <div class="grid">
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"Excellent service! The Ziptrak blocks heavy rain completely on my condo balcony. MCST approval was handled smoothly."</div></div>
+          <div class="review-author">— Jason T., Tampines</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"Very professional installation. The Dooya motor is so quiet and syncs with my Google Home perfectly."</div></div>
+          <div class="review-author">— Sarah L., Hougang</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"Changed my HDB balcony into a usable indoor space. The 5% openness fabric is just nice for airflow."</div></div>
+          <div class="review-author">— Michael C., Bukit Merah</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"The 2 days installation process was incredibly fast and seamless. The sleek frames match my BTO perfectly."</div></div>
+          <div class="review-author">— Emily W., Punggol</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"Highly recommend Elitex fabric. It effectively blocks the harsh afternoon heat while keeping my condo private."</div></div>
+          <div class="review-author">— David K., Sengkang</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"My balcony furniture is finally safe from sudden rainstorms! The 1% openness gives us great privacy."</div></div>
+          <div class="review-author">— Ryan P., Clementi</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"Direct factory pricing saved me hundreds. Premium quality, and getting MCST approval was a breeze."</div></div>
+          <div class="review-author">— Chloe S., Yishun</div>
+        </div>
+        <div class="review-card">
+          <div><div class="stars">★★★★★</div><div class="review-text">"Their WhatsApp support was responsive. The final automated blind setup completely exceeded expectations!"</div></div>
+          <div class="review-author">— Wei Ling, Jurong East</div>
+        </div>
       </div>
     </section>
 
@@ -477,15 +486,23 @@
       <h2>❓ Frequently Asked Questions</h2>
       <div class="qa-item">
         <strong>Q: Do I need MCST approval to install outdoor blinds in my condo?</strong>
-        <p>A: Yes. We make this easy by providing all necessary fabric specifications (e.g., 1% openness factor) and official color codes tailored to your condo’s guidelines to ensure smooth approval.</p>
+        <p>A: Yes. We make this easy by providing all necessary fabric specifications (e.g., 1% openness factor) and official color codes tailored to your condo’s guidelines to ensure quick and smooth approval.</p>
       </div>
       <div class="qa-item">
         <strong>Q: Are your outdoor blinds fully waterproof and windproof?</strong>
-        <p>A: Our Ziptrak® systems are highly weather-resistant. They effectively block heavy rain and withstand strong winds. For safety during extreme storms, we recommend retracting them.</p>
+        <p>A: Our Ziptrak® systems are highly weather-resistant. The side-track design effectively blocks heavy rain and withstands strong winds. However, for maximum safety during extreme storm warnings, we recommend retracting them.</p>
       </div>
       <div class="qa-item">
         <strong>Q: How long does the whole process take?</strong>
-        <p>A: After a free site measurement and order confirmation, the actual installation in your home usually finishes within just <strong>2 days</strong>.</p>
+        <p>A: After a free site measurement and order confirmation, fabrication takes a few days. The actual physical installation at your home is completed within just <strong>2 days</strong>, leaving your place clean and tidy.</p>
+      </div>
+      <div class="qa-item">
+        <strong>Q: What does the 5-Year Warranty cover?</strong>
+        <p>A: We provide a comprehensive 5-Year Warranty covering both the fabric (against abnormal fading and degradation) and the Dooya motor system (against manufacturing defects), giving you complete peace of mind.</p>
+      </div>
+      <div class="qa-item">
+        <strong>Q: Do I need to prepare a power socket for the motorised blinds?</strong>
+        <p>A: Yes, the Dooya tubular motor requires a standard power source. If your balcony doesn't have an existing socket, our site assessment team can advise you on the easiest way to route the power neatly.</p>
       </div>
     </section>
   </main>
