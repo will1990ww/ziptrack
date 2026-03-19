@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   
   <title>Lion Sin Elite Ziptrak® Singapore | Premium Motorised Outdoor Blinds</title>
-  <meta name="description" content="Upgrade your balcony with Lion Sin Elite Ziptrak® Singapore. Factory-direct pricing on advanced rainproof, windproof, and MCST-compliant outdoor blinds featuring advanced Phifer & Elitex fabrics."/>
-  <meta name="keywords" content="Ziptrak Singapore, Ziptrak, Elite Outdoor Blinds, Outdoor Blinds Condo, HDB Balcony Blinds, Motorised Blinds, Balcony Shades, Rainproof Blinds, MCST Approved"/>
+  <meta name="description" content="Looking for Ziptrak® in Singapore? Lion Sin offers premium motorised outdoor balcony blinds. Rainproof, windproof, and MCST-approved. Direct factory price, 2 days fast setup."/>
+  <meta name="keywords" content="Ziptrak Singapore, Ziptrak, Elite Outdoor Blinds, Balcony Blinds Singapore, Motorised Blinds, Rainproof Blinds, Condo Blinds, MCST Approved"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://lionsin.com.sg/" />
 
   <link rel="icon" href="photo/lionsinlogo.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="photo/lionsinlogo.png" sizes="512x512">
 
-  <meta property="og:title" content="Lion Sin Ziptrak® Singapore | Elite Outdoor Blinds" />
-  <meta property="og:description" content="Advanced rainproof, windproof, and MCST-compliant outdoor blinds. Factory-direct pricing." />
+  <meta property="og:title" content="Lion Sin Ziptrak® Singapore | Premium Outdoor Blinds" />
+  <meta property="og:description" content="Expert installation of rainproof and windproof Ziptrak® systems. 2 days setup with factory-direct pricing." />
   <meta property="og:image" content="https://lionsin.com.sg/photo/Exterior.jpg" />
   <meta property="og:url" content="https://lionsin.com.sg/" />
   
@@ -27,7 +28,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "LION SIN PTE. LTD.",
-      "image": "https://lionsin.com.sg/photo/Exterior.jpg",
+      "image": "https://lionsin.com.sg/photo/lionsinlogo.png",
       "telephone": "+65 83417888",
       "email": "bimprosg@outlook.com",
       "address": {
@@ -42,11 +43,26 @@
         "ratingValue": "5.0",
         "reviewCount": "10"
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Ziptrak® Installation Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "LION SIN PTE. LTD."
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Singapore"
+      },
+      "description": "Professional installation of motorised outdoor blinds, specifically Ziptrak® systems for condos, HDBs, and landed properties in Singapore."
     }
   ]
   </script>
 
   <style>
+    /* 高级黑灰框架主题 */
     :root {
       --primary: #4A90E2;
       --accent: #D4AF37; 
@@ -92,7 +108,7 @@
     h2 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--text); position: relative; margin: 1rem 0 3.5rem; text-align: center; font-weight: 600; letter-spacing: 1px; }
     h2::after { content: ""; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 40px; height: 2px; background: var(--accent); }
 
-    /* 顶部横向视频排列 */
+    /* 顶部横向视频排列 - 完美契合网页大小 */
     .hero { display: flex; flex-direction: column; gap: var(--gap); padding: 0; background: transparent; border: none; box-shadow: none; margin-bottom: 3rem; }
     .hero video { width: 100%; aspect-ratio: 21/9; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,0.6); background-color: #000; }
 
@@ -117,8 +133,21 @@
     .para ul { margin-left: 1.5rem; margin-top: 1rem; }
     .para ul li { margin-bottom: 10px; }
 
-    .table-wrapper { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: #1A1A1C;}
-    .comparison-table { width: 100%; border-collapse: collapse; text-align: left; table-layout: fixed; }
+    /* 表格深度优化：解决手机端拥挤问题 */
+    .table-wrapper { 
+      overflow-x: auto; 
+      margin-top: 1rem; 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius); 
+      background: #1A1A1C;
+      -webkit-overflow-scrolling: touch; /* 赋予 iOS 平滑的横向滚动体验 */
+    }
+    .comparison-table { 
+      width: 100%; 
+      min-width: 750px; /* 核心修复：强制最小宽度，手机端自动变身横向滑动条，绝不挤压文字 */
+      border-collapse: collapse; 
+      text-align: left; 
+    }
     .comparison-table th, .comparison-table td { padding: 1.2rem; border-bottom: 1px solid var(--border); vertical-align: top; }
     .comparison-table th { background: rgba(255, 255, 255, 0.05); color: var(--text); font-weight: 600; text-transform: uppercase; font-size: 0.9rem; }
     .comparison-table td:first-child { font-weight: 600; color: var(--text); background: rgba(255, 255, 255, 0.02); }
@@ -147,17 +176,12 @@
     #quote-form button { background: var(--wa-color); color: #fff; padding: 18px 30px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 1.1rem; width: 100%; transition: transform 0.2s, background 0.3s; letter-spacing: 1px; }
     #quote-form button:hover { background: #1EBE5D; transform: translateY(-2px); }
 
-    .fabric-samples { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-    .fabric-samples .sample { position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
-    .fabric-samples img { width: 100%; height: 160px; object-fit: cover; cursor: pointer; display: block; transition: transform 0.5s ease; filter: brightness(0.9); }
-    .fabric-samples img:hover { transform: scale(1.08); filter: brightness(1); }
-    .fabric-samples .sample::after { content: attr(data-letter); position: absolute; top: 10px; left: 10px; background: rgba(22, 22, 24, 0.9); color: var(--accent); font-family: 'Cinzel', serif; font-weight: bold; padding: 6px 14px; border-radius: 4px; font-size: 1.1rem; border: 1px solid var(--border); backdrop-filter: blur(4px); }
-
     .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .video-item { background: #1A1A1C; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); transition: transform 0.3s; }
     .video-item:hover { transform: translateY(-5px); border-color: var(--accent); }
-    .video-item video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background-color: #000; border-bottom: 1px solid var(--border); }
-    .video-item h4 { padding: 1.5rem; color: var(--text); font-size: 1.1rem; text-align: center; font-weight: 600; }
+    /* 视频完美大小优化：固定比例，防止撑破布局 */
+    .video-item video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background-color: #000; border-bottom: 1px solid var(--border); display: block; }
+    .video-item h4 { padding: 1.5rem; color: var(--text); font-size: 1.1rem; text-align: center; font-weight: 600; margin: 0; }
 
     #reviews .grid { display: grid; grid-template-columns: repeat(4, 1fr) !important; gap: 1.5rem; }
     .review-card { background: #1A1A1C; padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
@@ -289,7 +313,7 @@
       <h2>🌟 Our Premium Fabric Brands</h2>
       
       <div class="brand-desc">
-        <img src="https://flagcdn.com/us.svg" alt="USA Flag" class="flag" loading="lazy"/>
+        <img src="https://flagcdn.com/us.svg" alt="USA Flag for Phifer Ziptrak Fabric" class="flag" loading="lazy"/>
         <div>
           <div class="title">Phifer USA — The Global Standard for Advanced Outdoor Fabrics</div>
           <div class="para">
@@ -304,19 +328,19 @@
       </div>
 
       <div class="brand-desc">
-        <img src="https://flagcdn.com/it.svg" alt="Italy Flag" class="flag" loading="lazy"/>
+        <img src="https://flagcdn.com/it.svg" alt="Italy Flag for Elitex Ziptrak Fabric" class="flag" loading="lazy"/>
         <div>
           <div class="title">Italy’s Elitex — Unrivaled Craftsmanship & Advanced Performance</div>
           <div class="para">
-            Born from a heritage of Italian artistry and innovation, Elitex represents the pinnacle of performance textiles[cite: 95].
+            Born from a heritage of Italian artistry and innovation, Elitex represents the pinnacle of performance textiles.
             <h4 style="margin-top: 1.5rem; color: var(--accent);">Technical Specifications:</h4>
             <ul>
-              <li><strong>Composition:</strong> 75% PVC, 25% Polyester </li>
-              <li><strong>Openness Factor:</strong> Approx. 1% (Blackout)  and 5% (ScreenView) </li>
-              <li><strong>Thickness & Weight:</strong> 0.92mm / 730gsm [cite: 103, 104]</li>
-              <li><strong>FR Result (Fire Retardant):</strong> NFPA 701-2015 Method 1, EN 13773 Class 1 [cite: 106]</li>
-              <li><strong>Environmental Certification:</strong> GREENGUARD GOLD & Oeko-Tex Standard 100 Certified [cite: 110, 112]</li>
-              <li><strong>Warranty:</strong> 5-Year Premium Warranty [cite: 113]</li>
+              <li><strong>Composition:</strong> 75% PVC, 25% Polyester</li>
+              <li><strong>Openness Factor:</strong> Approx. 1% (Blackout) and 5% (ScreenView)</li>
+              <li><strong>Thickness & Weight:</strong> 0.92mm / 730gsm</li>
+              <li><strong>FR Result (Fire Retardant):</strong> NFPA 701-2015 Method 1, EN 13773 Class 1</li>
+              <li><strong>Environmental Certification:</strong> GREENGUARD GOLD & Oeko-Tex Standard 100 Certified</li>
+              <li><strong>Warranty:</strong> 5-Year Premium Warranty</li>
             </ul>
           </div>
         </div>
@@ -329,7 +353,7 @@
         <table class="comparison-table">
           <thead>
             <tr>
-              <th>Performance Feature </th>
+              <th>Performance Feature</th>
               <th>1% Blackout</th>
               <th>5% ScreenView</th>
               <th>10% Ventilation</th>
@@ -387,27 +411,27 @@
     <section id="fabric-gallery">
       <h2>Fabric Series & Applications Guide</h2>
       <div class="fabric-list">
-        <div class="fabric-item"><img src="photo/fabric1.jpg" alt="1% Openness Fabric" loading="lazy"><div class="text"><h4>1% Openness Blackout</h4><p>Maximum Aircon Retention & Privacy. Widely approved for condos.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric2.jpg" alt="2% Openness Fabric" loading="lazy"><div class="text"><h4>2% Openness Shade</h4><p>Excellent UV protection while allowing slight natural light diffusion.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric3.jpg" alt="3% Openness Fabric" loading="lazy"><div class="text"><h4>3% Openness Balance</h4><p>The perfect mid-point between outward visibility and indoor heat reduction.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric4.jpg" alt="5% Openness Fabric" loading="lazy"><div class="text"><h4>5% ScreenView Exterior</h4><p>Ideal for HDB balconies. Excellent airflow while maintaining clear outward views.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric1.jpg" alt="1% Openness Ziptrak Fabric Singapore" loading="lazy"><div class="text"><h4>1% Openness Blackout</h4><p>Maximum Aircon Retention & Privacy. Widely approved for condos.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric2.jpg" alt="2% Openness Balcony Blinds Fabric" loading="lazy"><div class="text"><h4>2% Openness Shade</h4><p>Excellent UV protection while allowing slight natural light diffusion.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric3.jpg" alt="3% Openness Outdoor Roller Blinds" loading="lazy"><div class="text"><h4>3% Openness Balance</h4><p>The perfect mid-point between outward visibility and indoor heat reduction.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric4.jpg" alt="5% Openness ScreenView Exterior" loading="lazy"><div class="text"><h4>5% ScreenView Exterior</h4><p>Ideal for HDB balconies. Excellent airflow while maintaining clear outward views.</p></div></div>
         
-        <div class="fabric-item"><img src="photo/fabric5.jpg" alt="10% Openness Fabric" loading="lazy"><div class="text"><h4>10% Openness Breezy</h4><p>Maximum ventilation for alfresco and garden areas.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric6.jpg" alt="Gray Fabric Series" loading="lazy"><div class="text"><h4>Charcoal Gray Series</h4><p>Modern and sleek, perfect for contemporary apartment aesthetics.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric7.jpg" alt="Beige Fabric Series" loading="lazy"><div class="text"><h4>Soft Beige Series</h4><p>Warm tones to create a cozy, resort-like balcony atmosphere.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric8.jpg" alt="Black Fabric Series" loading="lazy"><div class="text"><h4>Midnight Black Series</h4><p>Ultimate glare reduction. The choice for a bold, striking facade.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric5.jpg" alt="10% Openness Ventilation Fabric" loading="lazy"><div class="text"><h4>10% Openness Breezy</h4><p>Maximum ventilation for alfresco and garden areas.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric6.jpg" alt="Charcoal Gray Series Ziptrak" loading="lazy"><div class="text"><h4>Charcoal Gray Series</h4><p>Modern and sleek, perfect for contemporary apartment aesthetics.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric7.jpg" alt="Soft Beige Series Balcony Blinds" loading="lazy"><div class="text"><h4>Soft Beige Series</h4><p>Warm tones to create a cozy, resort-like balcony atmosphere.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric8.jpg" alt="Midnight Black Series Facade Blinds" loading="lazy"><div class="text"><h4>Midnight Black Series</h4><p>Ultimate glare reduction. The choice for a bold, striking facade.</p></div></div>
         
-        <div class="fabric-item"><img src="photo/fabric9.jpg" alt="Dual Tone Fabric" loading="lazy"><div class="text"><h4>Dual-Tone Weave</h4><p>Elegant textured finish that adds depth to your outdoor space.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric10.jpg" alt="Heavy Duty Mesh" loading="lazy"><div class="text"><h4>Heavy Duty Mesh</h4><p>Extra tear resistance for high-wind coastal properties.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric11.jpg" alt="Translucent Fabric" loading="lazy"><div class="text"><h4>Translucent Series</h4><p>Brightens up dark balconies without compromising on rain protection.</p></div></div>
-        <div class="fabric-item"><img src="photo/fabric12.jpg" alt="Custom Match Fabric" loading="lazy"><div class="text"><h4>Custom Color Matching</h4><p>MCST strictly compliant colors directly tailored to your estate.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric9.jpg" alt="Dual Tone Weave Ziptrak Fabric" loading="lazy"><div class="text"><h4>Dual-Tone Weave</h4><p>Elegant textured finish that adds depth to your outdoor space.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric10.jpg" alt="Heavy Duty Mesh Windproof Blinds" loading="lazy"><div class="text"><h4>Heavy Duty Mesh</h4><p>Extra tear resistance for high-wind coastal properties.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric11.jpg" alt="Translucent Series Outdoor Shades" loading="lazy"><div class="text"><h4>Translucent Series</h4><p>Brightens up dark balconies without compromising on rain protection.</p></div></div>
+        <div class="fabric-item"><img src="photo/fabric12.jpg" alt="Custom MCST Approved Colors" loading="lazy"><div class="text"><h4>Custom Color Matching</h4><p>MCST strictly compliant colors directly tailored to your estate.</p></div></div>
       </div>
     </section>
 
     <section id="dooya-info">
       <h2>Whisper-Quiet Dooya Motor Technology</h2>
       <div class="dooya-features">
-        <img src="photo/dooya sg.jpg" alt="Dooya Motor in Singapore" loading="lazy">
+        <img src="photo/dooya sg.jpg" alt="Dooya Motor Installation for Ziptrak Singapore" loading="lazy">
         <video autoplay muted loop playsinline preload="metadata" src="video/dooya-intro.mp4"></video>
         <div class="dooya-text">
           <p style="margin-bottom: 1rem; color: var(--gold); font-weight: bold;">Every 5 seconds, a Dooya motor is installed somewhere in the world.</p>
@@ -456,19 +480,6 @@
 
         <button type="button" id="sendWhatsApp">Get Instant Quote via WhatsApp</button>
       </form>
-    </section>
-
-    <section id="fabric-samples">
-      <h2>Aluminium & Fabric Colors – Click to Review</h2>
-      <div class="fabric-samples">
-        <div class="sample" data-letter="A"><img src="photo/A.jpg" onclick="window.open('photo/A.jpg','_blank')" alt="Sample A" loading="lazy"></div>
-        <div class="sample" data-letter="B"><img src="photo/B.jpg" onclick="window.open('photo/B.jpg','_blank')" alt="Sample B" loading="lazy"></div>
-        <div class="sample" data-letter="C"><img src="photo/C.jpg" onclick="window.open('photo/C.jpg','_blank')" alt="Sample C" loading="lazy"></div>
-        <div class="sample" data-letter="D"><img src="photo/D.jpg" onclick="window.open('photo/D.jpg','_blank')" alt="Sample D" loading="lazy"></div>
-        <div class="sample" data-letter="E"><img src="photo/E.jpg" onclick="window.open('photo/E.jpg','_blank')" alt="Sample E" loading="lazy"></div>
-        <div class="sample" data-letter="F"><img src="photo/F.jpg" onclick="window.open('photo/F.jpg','_blank')" alt="Sample F" loading="lazy"></div>
-        <div class="sample" data-letter="G"><img src="photo/G.jpg" onclick="window.open('photo/G.jpg','_blank')" alt="Sample G" loading="lazy"></div>
-      </div>
     </section>
 
     <section id="videos">
@@ -545,7 +556,7 @@
       </div>
       <div class="qa-item">
         <strong>Q: How long does the whole process take?</strong>
-        <p>A: After a free site measurement and order confirmation, the actual installation at your home is typically completed within a single day.</p>
+        <p>A: After a free site measurement and order confirmation, the actual installation at your home is typically completed within a rapid 2 days.</p>
       </div>
     </section>
   </main>
