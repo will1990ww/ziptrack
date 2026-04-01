@@ -5,7 +5,6 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-/* 新增 html { scroll-behavior: smooth; } 实现点击导航后的丝滑滚动效果 */
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: 'Open Sans', sans-serif; line-height: 1.7; padding-bottom: 80px; -webkit-font-smoothing: antialiased; }
 a { text-decoration: none; transition: all 0.3s ease; }
@@ -75,7 +74,6 @@ h2::after { content: ""; position: absolute; bottom: -15px; left: 50%; transform
 
 #quote-form form { padding: 3rem; background: #1A1A1C; border: 1px solid var(--border); border-radius: var(--radius); max-width: 800px; margin: 0 auto; }
 #quote-form input, #quote-form select { width: 100%; padding: 16px; margin-bottom: 1.5rem; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; background: var(--bg); color: var(--text); font-size: 16px; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
-/* 新增增强聚焦状态：更明显的无障碍提示框 */
 #quote-form input:focus, #quote-form select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
 #quote-form button { background: var(--wa-color); color: #fff; padding: 18px 30px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 1.1rem; width: 100%; transition: transform 0.2s; }
 #quote-form button:hover { background: #1EBE5D; transform: translateY(-2px); }
@@ -127,4 +125,10 @@ footer strong { color: var(--text); letter-spacing: 2px; font-family: 'Cinzel', 
   .dooya-text { grid-column: span 1; }
   .fab { width: 54px; height: 54px; }
   .fab svg { width: 28px; height: 28px; }
+}
+
+/* 极致性能优化：跳过屏幕外复杂元素的渲染，大幅提高 PageSpeed 得分 */
+#fabric-gallery, #videos, #projects, #reviews {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 800px;
 }
