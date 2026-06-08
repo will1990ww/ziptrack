@@ -87,11 +87,6 @@
     }
   ]
   </script>
-  <style>
-    :root { --bg: #0F0F11; --text: #EAEAEA; --accent: #D4AF37; }
-    body { background: var(--bg); color: var(--text); margin: 0; font-family: 'Open Sans', sans-serif; }
-    .hero video { width: 100%; background: #000; }
-  </style>
 
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
@@ -107,7 +102,7 @@
   </div>
 
   <header>
-    <div class="wrapper">
+    <div class="wrapper header-container">
       <h1>PREMIUM ZIPPERED SHADE SYSTEMS</h1>
       <nav>
         <a href="#products">Products</a>
@@ -120,8 +115,8 @@
   </header>
 
   <section class="hero wrapper">
-    <video autoplay muted loop playsinline preload="auto" src="video/shade-logo-video1.mp4"></video>
-    <video autoplay muted loop playsinline preload="auto" src="video/shade-logo-video2.mp4"></video>
+    <video autoplay muted loop playsinline preload="auto" src="video/ziptraklogovideo.mp4"></video>
+    <video autoplay muted loop playsinline preload="auto" src="video/ziptraklogovideo2.mp4"></video>
   </section>
 
   <main class="wrapper">
@@ -203,90 +198,87 @@
       <p style="text-align: center; color: var(--muted); margin-bottom: 2rem;">Click on any fabric swatch to view details.</p>
       
       <div class="fabric-list" id="dynamic-fabric-gallery">
-       <div class="fabric-item">
-    <img src="photo/0-coffee.png" alt="0% Coffee Blackout Fabric Lionsin" loading="lazy" class="zoomable">
-    <div class="text"><h4>0% Coffee</h4><p>Total Blackout</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/0-light-grey.png" alt="0% Light Grey Blackout Fabric Lionsin" loading="lazy" class="zoomable">
-    <div class="text"><h4>0% Light Grey</h4><p>Total Blackout</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/0-white.png" alt="0% White Blackout Fabric Lionsin" loading="lazy" class="zoomable">
-    <div class="text"><h4>0% White</h4><p>Total Blackout</p></div>
-</div>
-
-<div class="fabric-item">
-    <img src="photo/1-beige.png" alt="1% Beige Outdoor Blind Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>1% Beige</h4><p>High Privacy</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/1-coffee.png" alt="1% Coffee Outdoor Blind Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>1% Coffee</h4><p>High Privacy</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/1-dark-grey.png" alt="1% Dark Grey Outdoor Blind Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>1% Dark Grey</h4><p>High Privacy</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/1-light-grey.png" alt="1% Light Grey Outdoor Blind Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>1% Light Grey</h4><p>High Privacy</p></div>
-</div>
-
-<div class="fabric-item">
-    <img src="photo/5-beige.png" alt="5% Beige ScreenView Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>5% Beige</h4><p>Balanced View</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/5-black.png" alt="5% Black ScreenView Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>5% Black</h4><p>Balanced View</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/5-dark-grey.png" alt="5% Dark Grey ScreenView Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>5% Dark Grey</h4><p>Balanced View</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/5-light-coffee.png" alt="5% Light Coffee ScreenView Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>5% Light Coffee</h4><p>Balanced View</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/5-light-grey.png" alt="5% Light Grey ScreenView Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>5% Light Grey</h4><p>Balanced View</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/5-light-white.png" alt="5% Light White ScreenView Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>5% Light White</h4><p>Balanced View</p></div>
-</div>
-
-<div class="fabric-item">
-    <img src="photo/10-beige.png" alt="10% Beige Ventilation Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>10% Beige</h4><p>Max Airflow</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/10-brown.png" alt="10% Brown Ventilation Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>10% Brown</h4><p>Max Airflow</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/10-dark-grey.png" alt="10% Dark Grey Ventilation Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>10% Dark Grey</h4><p>Max Airflow</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/10-light-grey.png" alt="10% Light Grey Ventilation Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>10% Light Grey</h4><p>Max Airflow</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/10-white.png" alt="10% White Ventilation Fabric" loading="lazy" class="zoomable">
-    <div class="text"><h4>10% White</h4><p>Max Airflow</p></div>
-</div>
-
-<div class="fabric-item">
-    <img src="photo/30-light-grey.png" alt="30% Light Grey Insect Screen" loading="lazy" class="zoomable">
-    <div class="text"><h4>30% Light Grey</h4><p>Insect Screen</p></div>
-</div>
-<div class="fabric-item">
-    <img src="photo/30-white.png" alt="30% White Insect Screen" loading="lazy" class="zoomable">
-    <div class="text"><h4>30% White</h4><p>Insect Screen</p></div>
-</div>
+        <div class="fabric-item">
+            <img src="photo/0-coffee.png" alt="0% Coffee Blackout Fabric Lionsin" loading="lazy" class="zoomable">
+            <div class="text"><h4>0% Coffee</h4><p>Total Blackout</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/0-light-grey.png" alt="0% Light Grey Blackout Fabric Lionsin" loading="lazy" class="zoomable">
+            <div class="text"><h4>0% Light Grey</h4><p>Total Blackout</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/0-white.png" alt="0% White Blackout Fabric Lionsin" loading="lazy" class="zoomable">
+            <div class="text"><h4>0% White</h4><p>Total Blackout</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/1-beige.png" alt="1% Beige Outdoor Blind Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>1% Beige</h4><p>High Privacy</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/1-coffee.png" alt="1% Coffee Outdoor Blind Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>1% Coffee</h4><p>High Privacy</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/1-dark-grey.png" alt="1% Dark Grey Outdoor Blind Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>1% Dark Grey</h4><p>High Privacy</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/1-light-grey.png" alt="1% Light Grey Outdoor Blind Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>1% Light Grey</h4><p>High Privacy</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/5-beige.png" alt="5% Beige ScreenView Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>5% Beige</h4><p>Balanced View</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/5-black.png" alt="5% Black ScreenView Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>5% Black</h4><p>Balanced View</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/5-dark-grey.png" alt="5% Dark Grey ScreenView Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>5% Dark Grey</h4><p>Balanced View</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/5-light-coffee.png" alt="5% Light Coffee ScreenView Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>5% Light Coffee</h4><p>Balanced View</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/5-light-grey.png" alt="5% Light Grey ScreenView Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>5% Light Grey</h4><p>Balanced View</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/5-light-white.png" alt="5% Light White ScreenView Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>5% Light White</h4><p>Balanced View</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/10-beige.png" alt="10% Beige Ventilation Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>10% Beige</h4><p>Max Airflow</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/10-brown.png" alt="10% Brown Ventilation Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>10% Brown</h4><p>Max Airflow</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/10-dark-grey.png" alt="10% Dark Grey Ventilation Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>10% Dark Grey</h4><p>Max Airflow</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/10-light-grey.png" alt="10% Light Grey Ventilation Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>10% Light Grey</h4><p>Max Airflow</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/10-white.png" alt="10% White Ventilation Fabric" loading="lazy" class="zoomable">
+            <div class="text"><h4>10% White</h4><p>Max Airflow</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/30-light-grey.png" alt="30% Light Grey Insect Screen" loading="lazy" class="zoomable">
+            <div class="text"><h4>30% Light Grey</h4><p>Insect Screen</p></div>
+        </div>
+        <div class="fabric-item">
+            <img src="photo/30-white.png" alt="30% White Insect Screen" loading="lazy" class="zoomable">
+            <div class="text"><h4>30% White</h4><p>Insect Screen</p></div>
+        </div>
+      </div>
     </section>
 
     <section id="dooya-info">
@@ -316,13 +308,12 @@
           <input type="number" id="qLength" placeholder="Balcony Length (m)" aria-label="Balcony Length in meters" style="flex: 1; min-width: 140px;" required>
         </div>
         <select id="opennessType" aria-label="Select Fabric Series" required>
-          <option value="" disabled selected>Select Fabric Series (A–G)</option>
+          <option value="" disabled selected>Select Fabric Series (A–F)</option>
           <option value="A">A – 0% Blackout Series</option>
-          <option value="B">B – 2% Openness Series</option>
-          <option value="C">C – 3% Openness Series</option>
-          <option value="D">D – 5% Openness Series</option>
-          <option value="E">E – 10% Openness Series</option>
-          <option value="F">F – 30% Openness Series</option>
+          <option value="B">B – 1% Openness Series</option>
+          <option value="C">C – 5% Openness Series</option>
+          <option value="D">D – 10% Openness Series</option>
+          <option value="E">E – 30% Openness Series</option>
         </select>
         <select id="fabricColorChoice" aria-label="Select Fabric Color" required><option value="" disabled selected>Select Fabric Color</option></select>
         <select id="aluminiumColorChoice" aria-label="Select Aluminium Color" required>
@@ -342,9 +333,9 @@
         <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/Electric_Manual_Hybrid.mp4"></video><h4>Electric / Manual</h4></div>
         <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/Manual_Only.mp4"></video><h4>Manual Only</h4></div>
         <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/NewVideo1.mp4"></video><h4>Automated Production</h4></div>
-        <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/Test_Video_1.mp4.mp4"></video><h4>Performance Test</h4></div>
+        <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/Test_Video_1.mp4"></video><h4>Performance Test</h4></div>
         <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/Waterproof_Windproof_Test.mp4"></video><h4>Waterproof Test</h4></div>
-        <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/shade-after.mp4"></video><h4>Installation Effect</h4></div>
+        <div class="video-item"><video class="lazy-video" muted loop playsinline preload="none" data-src="video/ziptrak after.mp4"></video><h4>Installation Effect</h4></div>
       </div>
     </section>
 
@@ -381,7 +372,7 @@
   <footer>
     <div class="wrapper">
       <strong>LIONSIN PTE. LTD.</strong><br><br>
-      WhatsApp: 8341 7888 | Telegram: @lionsinbalcony | Email: bimprosg@outlook.com<br>
+      WhatsApp: +65 8341 7888 | Telegram: @lionsinbalcony | Email: bimprosg@outlook.com<br>
       Serving HDBs, Condos, & Landed Properties Islandwide<br><br>
       <span style="font-size: 0.8rem; color: #555;">Lion Sin Pte. Ltd. is an independent installation specialist of premium Zippered Outdoor Shade Systems.</span>
     </div>
