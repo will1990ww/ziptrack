@@ -1,9 +1,0 @@
-{
-  "name": "Balcony Master",
-  "short_name": "BalconyMaster",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1E4D3B",
-  "icons": []
-}
