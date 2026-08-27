@@ -1,0 +1,69 @@
+WIRING THE CLOUDFLARE WORKER INTO YOUR FORMS  (deploy-ready)
+============================================================
+
+WHAT THIS DOES (plain English)
+Your quote forms currently email you via FormSubmit (a free 3rd-party service).
+This wiring lets you switch them to YOUR OWN Cloudflare Worker, which:
+  • checks each uploaded file's real type/size/count (blocks bad uploads),
+  • keeps data on your own account (better PDPA story), and
+  • never loses a lead — if the Worker is unreachable, the visitor is auto-
+    redirected to WhatsApp with their details pre-filled.
+No website rebuild is needed to switch — it's one line in js/config.js.
+
+HOW THE HYBRID WORKS
+  • Without JavaScript: the form still POSTs to FormSubmit (its native action),
+    so it keeps working out of the box for everyone.
+  • With JavaScript AND a Worker URL set: main.js intercepts the submit and
+    sends it to your Worker (secure upload checks). On success it shows the
+    thank-you state; on failure it falls back to WhatsApp.
+
+-------------------------------------------------------------------
+STEP 1 — DEPLOY THE WORKER (about 5 minutes)
+-------------------------------------------------------------------
+1. dash.cloudflare.com -> Workers & Pages -> Create -> Worker -> Deploy.
+2. Edit the Worker and paste the contents of  worker/form-worker.js  -> Save/Deploy.
+3. Settings -> Variables -> add:
+       TO_EMAIL      = bimprosg@outlook.com   (or enquiry@lionsin.com.sg)
+       FROM_EMAIL    = no-reply@lionsin.com.sg   (must be on your domain)
+       ALLOW_ORIGIN  = https://www.lionsin.com.sg
+       THANKYOU_URL  = https://www.lionsin.com.sg/thank-you.html
+4. Give it a nice URL: Workers -> your worker -> Triggers -> Custom Domains ->
+       add   form.lionsin.com.sg   (Cloudflare creates the DNS record for you).
+   (You can also just use the *.workers.dev URL to start.)
+
+EMAIL SENDING NOTE
+   The Worker uses MailChannels. MailChannels now requires a domain-lockdown
+   DNS TXT record — follow Cloudflare's current MailChannels guide, OR replace
+   the sendEmail() function with your provider (Resend / SendGrid / Postmark),
+   which is just an API key + fetch. The rest of the Worker stays the same.
+
+-------------------------------------------------------------------
+STEP 2 — FLIP THE SWITCH ON THE WEBSITE (one line)
+-------------------------------------------------------------------
+Open  js/config.js  and set your Worker URL:
+
+   formEndpoint: "https://form.lionsin.com.sg",
+
+Leave  fallbackToWhatsApp: true  (recommended). Save, upload js/config.js.
+That's it — every form now uses the Worker, with WhatsApp as the safety net.
+
+TO TURN IT OFF again, set  formEndpoint: ""  (forms revert to FormSubmit).
+
+-------------------------------------------------------------------
+STEP 3 — TEST
+-------------------------------------------------------------------
+  [ ] Submit the form with a valid photo -> you receive the email; page shows
+      "Thank you — request received".
+  [ ] Submit with a .exe or a 20 MB file -> Worker rejects it (422).
+  [ ] Temporarily set a wrong formEndpoint -> submit -> it should open WhatsApp
+      with your details (the fallback). Then restore the correct URL.
+
+UPLOAD LIMITS ENFORCED BY THE WORKER
+  Max 6 files · 10 MB each · 25 MB total · only JPG/PNG/WEBP/PDF, verified by
+  file signature (not just the extension). Adjust the constants at the top of
+  worker/form-worker.js if you want different limits.
+
+SECURITY EXTRAS (optional)
+  • Add Cloudflare Turnstile (free CAPTCHA) for stronger spam protection.
+  • Add rate-limiting via Cloudflare rules on the form.* route.
+  • Combine with the security-headers/CSP package from earlier.

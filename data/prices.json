@@ -1,0 +1,6 @@
+{ "_meta": { "currency":"SGD","last_reviewed":"2026-08" },
+  "decking": { "unit":"per_ft2", "tiers":[{"id":"essential","name":"Entry composite / WPC","from":18,"to":23},{"id":"performance","name":"Mid-range capped WPC","from":24,"to":32},{"id":"premium","name":"Premium / marble, tiles & stone","from":33,"to":45}]},
+  "blinds": { "unit":"per_ft2","warranty_years":5,"tiers":[{"id":"manual","name":"Manual zip blind","from":18,"to":28},{"id":"motorised","name":"Motorised zip blind","from":25,"to":35},{"id":"premium","name":"Premium / smart zip blind","from":30,"to":45}]},
+  "grilles": { "unit":"per_ft2","tiers":[{"id":"nylon","name":"Nylon fixed grille","from":8,"warranty":"3-year"},{"id":"ptfe","name":"PTFE-coated fixed grille","from":10,"warranty":"5-year"},{"id":"nano","name":"Nano all-weather fixed grille","from":16,"warranty":"10-year"}]},
+  "roof": { "unit":"per_project","tiers":[{"id":"manual","name":"Manual retractable awning","from":800,"to":3000},{"id":"motorised","name":"Motorised retractable roof","from":2500,"to":6000},{"id":"premium","name":"Premium cassette / louvered","from":6000,"to":20000}]}
+}
