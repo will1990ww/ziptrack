@@ -1,0 +1,21 @@
+BALCONY MASTER — SINGAPORE COMPLIANCE CHECKLIST
+================================================
+BEFORE PUBLIC LAUNCH
+ [ ] Business legitimacy on About/Footer: registered entity name, UEN, and any
+     HDB-registered contractor / bizSAFE credentials you actually hold.
+ [ ] GST: show GST registration number if registered; state "prices exclude/include GST".
+ [ ] PDPA: name a Data Protection contact; keep the Privacy Notice (already drafted)
+     accurate to your real form processor (FormSubmit or the Worker). Honour access/
+     deletion requests. Don't collect more than needed.
+ [ ] Claims: only state accreditations/warranties you can evidence. Keep an internal
+     evidence file per product (supplier data sheet, warranty scope, price version/date).
+ [ ] Trademarks: "Ziptrak®/Skyline®/Teflon™" are used nominatively with disclaimers —
+     do NOT claim to be an authorised dealer unless you are.
+ [ ] Reviews: only publish real, customer-approved reviews. Enable star schema
+     (REVIEWS_LIVE) only when genuine.
+ [ ] Uploads: if you keep FormSubmit, confirm its retention suits you; otherwise deploy
+     worker/form-worker.js (validates file type/size/count server-side).
+
+NICE TO HAVE
+ [ ] Cookie/consent banner if you enable analytics/ads pixels.
+ [ ] Security headers + CSP (see the earlier security-headers package).

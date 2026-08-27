@@ -1,0 +1,35 @@
+BALCONY MASTER — 90-DAY GROWTH PLAN (Singapore)
+================================================
+Website is done. These steps turn it into leads.
+
+WEEKS 1–2 (free, highest impact)
+ [ ] Google Business Profile (business.google.com) — photos, services, service area.
+ [ ] Google Search Console — verify, submit sitemap.xml, request indexing for the
+     homepage + 4 service pages + 3 landing pages.
+ [ ] Reviews: after each job, WhatsApp a Google review link. Aim 20–30 at 4.8★.
+     When you have real reviews, paste them into data/reviews.js AND set
+     REVIEWS_LIVE=True in build.py (adds star schema, compliant).
+ [ ] Replace sample project photos with your real before/after job photos
+     (assets/images/ba/* and the galleries) — biggest trust boost.
+
+WEEKS 3–4
+ [ ] Directories with identical Name/Address/Phone: Qanvast, RenoNation,
+     HomeRenoGuru, Carousell, Facebook, Google.
+ [ ] WhatsApp automation: quick replies / catalogue; pin the brochure PDF.
+ [ ] Activate the form: submit once, click the FormSubmit confirmation email
+     (or deploy worker/form-worker.js for a proper endpoint + upload scanning).
+
+WEEKS 5–8
+ [ ] Google Search Ads (small budget) on: "invisible grille price", "retractable
+     roof singapore", "zip blinds", "balcony decking". GA4 lead events already fire.
+ [ ] Meta ads with before/after creatives; add a retargeting pixel.
+ [ ] Publish 1–2 more guides (reuse the guide template in build.py).
+
+WEEKS 9–12
+ [ ] Simple CRM + instant auto-reply (speed-to-lead wins jobs).
+ [ ] Referral offer: "Refer a neighbour, both get $X off."
+ [ ] Apply security headers/CSP (previous zip) + server-side uploads (worker).
+
+TRACK: GA4 events already included — generate_lead, quote_cta_click,
+contact_call/whatsapp/email, video_play, pricing_tab, estimator_use.
+Mark generate_lead / contact_whatsapp / contact_call as key events in GA4.

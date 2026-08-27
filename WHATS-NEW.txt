@@ -1,0 +1,26 @@
+WHAT'S NEW (this build)
+=======================
+(a) WORKER WIRED INTO THE FORMS — deploy-ready, with graceful fallback
+  • js/config.js now has a one-line switch:  formEndpoint: "https://form.lionsin.com.sg"
+    - Empty  -> forms use FormSubmit (works today, no setup).
+    - Set    -> forms POST to YOUR Cloudflare Worker (secure upload checks).
+  • js/main.js: when the endpoint is set, it submits via fetch (adds X-BM-Ajax
+    header, 15s timeout). On success -> thank-you state. On failure -> auto
+    WhatsApp fallback with the visitor's details (never lose a lead).
+  • worker/form-worker.js: returns clean JSON to JS requests, 303 redirect to
+    no-JS submissions; CORS updated; validates file type/size/count by signature.
+  • worker/WORKER-WIRING.txt: 5-minute deploy + one-line switch guide.
+  Benefit: safer uploads, better PDPA (your own endpoint), zero lost leads.
+
+(b) GENUINELY DISTINCT PRODUCT PHOTOS (batch 1)
+  • New professional, distinct images for decking: capped WPC close-up,
+    Chengal hardwood patio, and marble/stone pool deck — applied to the decking
+    product cards AND the decking hero triptych (3 different scenes) + service card.
+  • New manual zip-blind photo (HDB balcony, hand-crank) for its product card
+    and hero tile.
+  (More distinct photos for the remaining blind/grille/roof tiles can be added
+   in the same way; current ones use your original supplied images.)
+
+All prior features intact (estimator, before/after sliders, trust badges,
+testimonials, guides + landing pages, brochure, seller-protective warranty,
+SEO, accessibility). Automated QA: 17/17 pass. build.py + all JS compile clean.
